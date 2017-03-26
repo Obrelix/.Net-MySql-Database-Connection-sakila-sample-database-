@@ -7,10 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.Odbc;
 
-namespace DatabaseForm
+namespace SakilaDBFormApp
 {
     public partial class frmReader2 : Form
     {

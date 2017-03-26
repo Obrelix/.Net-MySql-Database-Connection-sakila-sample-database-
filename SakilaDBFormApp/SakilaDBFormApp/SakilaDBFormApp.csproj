@@ -64,6 +64,8 @@
     <Compile Include="Forms\frmReader2.designer.cs">
       <DependentUpon>frmReader2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\IdName.cs" />
+    <Compile Include="Classes\My.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmConnection.resx">

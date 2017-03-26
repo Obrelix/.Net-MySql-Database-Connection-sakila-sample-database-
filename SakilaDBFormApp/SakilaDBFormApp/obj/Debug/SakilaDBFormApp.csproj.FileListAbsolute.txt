@@ -8,3 +8,4 @@ C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-databa
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.exe
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.pdb
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmConnection.resources
+C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmReader2.resources

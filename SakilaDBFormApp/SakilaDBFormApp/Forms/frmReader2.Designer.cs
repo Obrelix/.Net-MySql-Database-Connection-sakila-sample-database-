@@ -1,4 +1,4 @@
-﻿namespace DatabaseForm
+﻿namespace SakilaDBFormApp
 {
     partial class frmReader2
     {
