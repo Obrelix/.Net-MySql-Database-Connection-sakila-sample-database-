@@ -1,0 +1,2 @@
+c:\users\tataki\documents\visual studio 2015\Projects\SakilaDBFormApp\SakilaDBFormApp\bin\Debug\SakilaDBFormApp.exe.config
+C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\bin\Debug\SakilaDBFormApp.exe.config
