@@ -113,7 +113,7 @@
             this.btnDesconnect.Name = "btnDesconnect";
             this.btnDesconnect.Size = new System.Drawing.Size(75, 23);
             this.btnDesconnect.TabIndex = 8;
-            this.btnDesconnect.Text = "Desconnect";
+            this.btnDesconnect.Text = "Disconnect";
             this.btnDesconnect.UseVisualStyleBackColor = true;
             // 
             // btnConnect

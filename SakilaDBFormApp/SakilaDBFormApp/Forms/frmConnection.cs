@@ -12,6 +12,10 @@ namespace SakilaDBFormApp
 {
     public partial class frmConnection : Form
     {
+        public static string serverIP = "127.0.0.1", serverPort = "3306",
+            userName = "root", userPassword = "";
+
+
         public frmConnection()
         {
             InitializeComponent();
@@ -19,7 +23,13 @@ namespace SakilaDBFormApp
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            DB.Connect(txtbServer.Text, txtbPort.Text, txtbUser.Text, txtbPassword.Text);
+            serverIP = txtbServer.Text;
+            serverPort = txtbPort.Text;
+            userName = txtbUser.Text;
+            userPassword = txtbPassword.Text;
+
+            DB.Connect(frmConnection.serverIP, frmConnection.serverPort, 
+                frmConnection.userName, frmConnection.userPassword);
             showState();
             
         }

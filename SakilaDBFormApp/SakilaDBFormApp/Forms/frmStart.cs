@@ -10,11 +10,37 @@ using System.Windows.Forms;
 
 namespace SakilaDBFormApp
 {
-    public partial class Form1 : Form
+    public partial class frmStart : Form
     {
-        public Form1()
+        public frmStart()
         {
             InitializeComponent();
+            showState();
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            DB.Connect(frmConnection.serverIP, frmConnection.serverPort,
+                frmConnection.userName, frmConnection.userPassword);
+            showState();
+            
+        }
+
+        private void showState()
+        {
+            pnlConnection.BackColor = (DB.Cn.State == ConnectionState.Open) ? Color.Green : Color.Red;
+        }
+
+        private void chbCoonectionForm_CheckedChanged(object sender, EventArgs e)
+        {
+            frmConnection form = new frmConnection();
+            form.Show();
+        }
+
+        private void btnDisconnect_Click(object sender, EventArgs e)
+        {
+            DB.Disconnect();
+            showState();
         }
     }
 }
