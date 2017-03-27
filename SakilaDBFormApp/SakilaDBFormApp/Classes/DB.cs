@@ -31,7 +31,7 @@ namespace SakilaDBFormApp
                             ";Driver={MySQL ODBC 5.3 UNICODE Driver}" +
                             ";Server=" + server +
                             ";Port=" + port +
-                            ";Database=northwind" +
+                            ";Database=sakila" +
                             ";User=" + user +
                             ";Password=" + password +
                             ";Option=3";

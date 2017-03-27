@@ -64,18 +64,36 @@
     <Compile Include="Forms\frmReader2.designer.cs">
       <DependentUpon>frmReader2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\IdName.cs" />
+    <Compile Include="Classes\IdTitle.cs" />
     <Compile Include="Classes\My.cs" />
+    <Compile Include="Forms\frmMovies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMovies.Designer.cs">
+      <DependentUpon>frmMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAdapterLight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdapterLight.designer.cs">
+      <DependentUpon>frmAdapterLight.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmConnection.resx">
       <DependentUpon>frmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMovies.resx">
+      <DependentUpon>frmMovies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReader2.resx">
       <DependentUpon>frmReader2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdapterLight.resx">
+      <DependentUpon>frmAdapterLight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

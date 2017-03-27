@@ -6,10 +6,10 @@
 <canvas zoom="100">
 <tables>
 <table name="actor" view="colnames">
-<left>769</left>
-<top>115</top>
+<left>762</left>
+<top>203</top>
 <width>166</width>
-<height>141</height>
+<height>126</height>
 <sql_create_table>CREATE TABLE `actor` (
   `actor_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `first_name` varchar(45) NOT NULL,
@@ -23,7 +23,7 @@
 <left>146</left>
 <top>411</top>
 <width>114</width>
-<height>209</height>
+<height>194</height>
 <sql_create_table>CREATE TABLE `address` (
   `address_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `address` varchar(50) NOT NULL,
@@ -39,10 +39,10 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=606 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="category" view="colnames">
-<left>771</left>
-<top>584</top>
+<left>760</left>
+<top>639</top>
 <width>165</width>
-<height>124</height>
+<height>122</height>
 <sql_create_table>CREATE TABLE `category` (
   `category_id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(25) NOT NULL,
@@ -54,7 +54,7 @@
 <left>284</left>
 <top>546</top>
 <width>153</width>
-<height>141</height>
+<height>129</height>
 <sql_create_table>CREATE TABLE `city` (
   `city_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `city` varchar(50) NOT NULL,
@@ -66,10 +66,10 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=601 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="country" view="colnames">
-<left>143</left>
-<top>630</top>
+<left>20</left>
+<top>581</top>
 <width>119</width>
-<height>124</height>
+<height>112</height>
 <sql_create_table>CREATE TABLE `country` (
   `country_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `country` varchar(50) NOT NULL,
@@ -78,8 +78,8 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="customer" view="colnames">
-<left>474</left>
-<top>362</top>
+<left>472</left>
+<top>394</top>
 <width>116</width>
 <height>226</height>
 <sql_create_table>CREATE TABLE `customer` (
@@ -101,10 +101,10 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=600 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="film" view="colnames">
-<left>769</left>
-<top>275</top>
+<left>762</left>
+<top>343</top>
 <width>164</width>
-<height>303</height>
+<height>284</height>
 <sql_create_table>CREATE TABLE `film` (
   `film_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -128,8 +128,8 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="film_actor" view="colnames">
-<left>966</left>
-<top>113</top>
+<left>949</left>
+<top>267</top>
 <width>112</width>
 <height>124</height>
 <sql_create_table>CREATE TABLE `film_actor` (
@@ -143,8 +143,8 @@
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="film_category" view="colnames">
-<left>960</left>
-<top>329</top>
+<left>955</left>
+<top>424</top>
 <width>113</width>
 <height>124</height>
 <sql_create_table>CREATE TABLE `film_category` (
@@ -187,10 +187,10 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="payment" view="colnames">
-<left>300</left>
-<top>4</top>
+<left>275</left>
+<top>58</top>
 <width>151</width>
-<height>192</height>
+<height>177</height>
 <sql_create_table>CREATE TABLE `payment` (
   `payment_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `customer_id` smallint(5) unsigned NOT NULL,
@@ -210,9 +210,9 @@
 </table>
 <table name="rental" view="colnames">
 <left>481</left>
-<top>89</top>
+<top>109</top>
 <width>116</width>
-<height>192</height>
+<height>180</height>
 <sql_create_table>CREATE TABLE `rental` (
   `rental_id` int(11) NOT NULL AUTO_INCREMENT,
   `rental_date` datetime NOT NULL,
@@ -232,10 +232,10 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=16050 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="staff" view="colnames">
-<left>10</left>
-<top>173</top>
+<left>6</left>
+<top>191</top>
 <width>112</width>
-<height>260</height>
+<height>244</height>
 <sql_create_table>CREATE TABLE `staff` (
   `staff_id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `first_name` varchar(45) NOT NULL,

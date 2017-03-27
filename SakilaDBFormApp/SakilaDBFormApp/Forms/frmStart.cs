@@ -42,5 +42,11 @@ namespace SakilaDBFormApp
             DB.Disconnect();
             showState();
         }
+
+        private void btnMovies_Click(object sender, EventArgs e)
+        {
+            frmAdapterLight form = new frmAdapterLight();
+            form.Show();
+        }
     }
 }

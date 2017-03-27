@@ -16,7 +16,7 @@ namespace SakilaDBFormApp
         OdbcCommand cmd;
         OdbcDataReader reader;
         string SQL;
-        List<IdName> ListEmployees = new List<IdName>();
+        List<IdTitle> ListEmployees = new List<IdTitle>();
         DataTable tblOrders = new DataTable();
 
         public frmReader2()
@@ -32,7 +32,7 @@ namespace SakilaDBFormApp
         }
         private void LoadEmployees()
         {
-            IdName a;
+            IdTitle a;
             SQL = "SELECT EmployeeID,FirstName,LastName FROM employees";
             try
             {
@@ -42,7 +42,7 @@ namespace SakilaDBFormApp
                 //lblEmployee.Text = "";
                 while (reader.Read())
                 {
-                    a = new IdName(reader[0].ToString(),
+                    a = new IdTitle(reader[0].ToString(),
                         //boroume omoios na grapsoume reader[1] bla bla
                     reader["LastName"].ToString() + " " + reader["FirstName"].ToString());
                     ListEmployees.Add(a);
@@ -75,8 +75,8 @@ namespace SakilaDBFormApp
             cb.BeginUpdate();
             cb.DataSource = null;
             cb.DataSource = ListEmployees;
-            cb.ValueMember = "Id";
-            cb.DisplayMember = "Name";
+            cb.ValueMember = "id";
+            cb.DisplayMember = "title";
             cb.EndUpdate();
         }
 
@@ -91,51 +91,51 @@ namespace SakilaDBFormApp
             LoadEmployees();
         }
 
-        private void ShowOrders()
+        private void ShowRentals()
         {
-        int empid;
-        string apo, eos;
-        string sWHERE;
-        try
-        {
-            apo = dtpApo.Value.ToString("yyyy-MM-dd");
-            eos = dtpEos.Value.ToString("yyyy-MM-dd");
-            sWHERE = "WHERE OrderDate BETWEEN '" + apo + "' AND '" + eos + "'";
-            if (cbxEmp.SelectedIndex >=0 )
+            int empid;
+            string apo, eos;
+            string sWHERE;
+            try
             {
-                IdName a = (IdName)cbxEmp.SelectedItem;
-                empid = Convert.ToInt32(a.id);
-                sWHERE += " AND employeeid=" + empid;
+                apo = dtpApo.Value.ToString("yyyy-MM-dd");
+                eos = dtpEos.Value.ToString("yyyy-MM-dd");
+                sWHERE = "WHERE rental_date BETWEEN '" + apo + "' AND '" + eos + "'";
+                if (cbxEmp.SelectedIndex >=0 )
+                {
+                    IdTitle a = (IdTitle)cbxEmp.SelectedItem;
+                    empid = Convert.ToInt32(a.id);
+                    sWHERE += " AND employeeid=" + empid;
+                }
+                if (txtCustomer.Text != "")
+                {
+                    sWHERE += " AND CustomerId LIKE " + My.Quote(txtCustomer.Text + "%");
+                }
+                SQL = "SELECT * FROM rental " + sWHERE;
+                cmd.CommandText = SQL;
+                reader =cmd.ExecuteReader();
+                tblOrders.Rows.Clear();
+                tblOrders.Load(reader);
+                dgvOrders.DataSource = tblOrders;
+                this.Text = tblOrders.Rows.Count.ToString();
+                if (reader != null)
+                {
+                    reader.Close();
+                }
             }
-            if (txtCustomer.Text != "")
+            catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }
+            finally
             {
-                sWHERE += " AND CustomerId LIKE " + My.Quote(txtCustomer.Text + "%");
+                //reader?.Close();
             }
-            SQL = "SELECT * FROM orders " + sWHERE;
-            cmd.CommandText = SQL;
-            reader =cmd.ExecuteReader();
-            tblOrders.Rows.Clear();
-            tblOrders.Load(reader);
-            dgvOrders.DataSource = tblOrders;
-            this.Text = tblOrders.Rows.Count.ToString();
-            if (reader != null)
-            {
-                reader.Close();
-            }
-        }
-        catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }
-        finally
-        {
-            //reader?.Close();
-        }
         }
         private void btnGo_Click(object sender, EventArgs e)
         {
-            ShowOrders();
+            ShowRentals();
         }
         private void cbEmp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ShowOrders();
+            ShowRentals();
         }
 
         private void tmrClock_Tick(object sender, EventArgs e)

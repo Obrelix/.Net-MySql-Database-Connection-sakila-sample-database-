@@ -104,6 +104,7 @@
             this.btnMovies.TabIndex = 4;
             this.btnMovies.Text = "Show Movies";
             this.btnMovies.UseVisualStyleBackColor = true;
+            this.btnMovies.Click += new System.EventHandler(this.btnMovies_Click);
             // 
             // pnlReaders
             // 
