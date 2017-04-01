@@ -83,6 +83,7 @@
             this.txtMovieName.Name = "txtMovieName";
             this.txtMovieName.Size = new System.Drawing.Size(100, 20);
             this.txtMovieName.TabIndex = 15;
+            this.txtMovieName.TextChanged += new System.EventHandler(this.txtMovieName_TextChanged);
             // 
             // cbxCategories
             // 
@@ -118,6 +119,7 @@
             this.AcceptButton = this.btnGo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
             this.ClientSize = new System.Drawing.Size(835, 363);
             this.Controls.Add(this.lblMovies);
             this.Controls.Add(this.label1);

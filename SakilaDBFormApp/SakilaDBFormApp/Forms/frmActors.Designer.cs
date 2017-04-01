@@ -30,6 +30,8 @@
         {
             this.lblActors = new System.Windows.Forms.Label();
             this.dgvActors = new System.Windows.Forms.DataGridView();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActors)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,24 +46,46 @@
             // 
             // dgvActors
             // 
+            this.dgvActors.AllowUserToAddRows = false;
             this.dgvActors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvActors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.firstName,
+            this.lastName});
             this.dgvActors.Location = new System.Drawing.Point(12, 25);
             this.dgvActors.Name = "dgvActors";
-            this.dgvActors.Size = new System.Drawing.Size(355, 191);
+            this.dgvActors.ReadOnly = true;
+            this.dgvActors.Size = new System.Drawing.Size(355, 165);
             this.dgvActors.TabIndex = 2;
+            // 
+            // firstName
+            // 
+            this.firstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.firstName.DataPropertyName = "first_name";
+            this.firstName.HeaderText = "First Name";
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
+            // 
+            // lastName
+            // 
+            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastName.DataPropertyName = "last_name";
+            this.lastName.HeaderText = "Last Name";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
             // 
             // frmActors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 228);
+            this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
+            this.ClientSize = new System.Drawing.Size(379, 202);
             this.Controls.Add(this.dgvActors);
             this.Controls.Add(this.lblActors);
             this.Name = "frmActors";
-            this.Text = "frmActors";
+            this.Text = "Actors";
             ((System.ComponentModel.ISupportInitialize)(this.dgvActors)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -71,5 +95,7 @@
         #endregion
         private System.Windows.Forms.Label lblActors;
         private System.Windows.Forms.DataGridView dgvActors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
     }
 }

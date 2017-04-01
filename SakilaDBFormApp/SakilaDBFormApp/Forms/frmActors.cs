@@ -18,14 +18,16 @@ namespace SakilaDBFormApp
         DataTable dtActors = new DataTable();
         string SQL;
 
-        public frmActors()
+        public frmActors(string movieTitle)
         {
             InitializeComponent();
             cmd = new OdbcCommand();
             cmd.Connection = DB.Cn;
+            this.Text ="Actors of: " + movieTitle;
+            GetData(movieTitle);
         }
 
-        public void GetData(string filmTitle)
+        private void GetData(string filmTitle)
         {
             try
             {

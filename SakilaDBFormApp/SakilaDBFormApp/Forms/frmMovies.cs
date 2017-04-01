@@ -151,11 +151,16 @@ namespace SakilaDBFormApp
             if(e.RowIndex != -1)
             {
                 string title = dvgMovies.Rows[e.RowIndex].Cells[0].Value.ToString();
-                frmActors form = new frmActors();
+                frmActors form = new frmActors(title);
                 form.Show();
-                form.GetData(title);
             }
             //form.GetDada();
+        }
+
+        private void txtMovieName_TextChanged(object sender, EventArgs e)
+        {
+            cbxCategories.SelectedIndex = -1;
+            cbxCategories.Text = "Select Category ... ";
         }
     }
 }
