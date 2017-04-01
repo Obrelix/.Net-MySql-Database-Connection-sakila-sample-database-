@@ -57,7 +57,7 @@
             this.dgvActors.Location = new System.Drawing.Point(12, 25);
             this.dgvActors.Name = "dgvActors";
             this.dgvActors.ReadOnly = true;
-            this.dgvActors.Size = new System.Drawing.Size(355, 165);
+            this.dgvActors.Size = new System.Drawing.Size(267, 128);
             this.dgvActors.TabIndex = 2;
             // 
             // firstName
@@ -81,7 +81,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
-            this.ClientSize = new System.Drawing.Size(379, 202);
+            this.ClientSize = new System.Drawing.Size(291, 165);
             this.Controls.Add(this.dgvActors);
             this.Controls.Add(this.lblActors);
             this.Name = "frmActors";
