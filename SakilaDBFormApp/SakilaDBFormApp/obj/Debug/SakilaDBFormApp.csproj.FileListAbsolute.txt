@@ -24,3 +24,4 @@ C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-datab
 C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmAdapterLight.resources
 C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.Properties.Resources.resources
 C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.csproj.GenerateResource.Cache
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmActors.resources

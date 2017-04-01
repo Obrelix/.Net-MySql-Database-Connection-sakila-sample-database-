@@ -108,7 +108,7 @@ namespace SakilaDBFormApp
 
                 tblMovies.Rows.Clear();
                 tblMovies.Load(reader);
-                dgvOrders.DataSource = tblMovies;
+                dvgMovies.DataSource = tblMovies;
                 lblMovies.Text ="Movies Found: " + tblMovies.Rows.Count.ToString();
                 if (reader != null)
                 {
@@ -122,10 +122,7 @@ namespace SakilaDBFormApp
                 //reader?.Close();
             }
         }
-        private void btnGo_Click(object sender, EventArgs e)
-        {
-           
-        }
+
         private void cbEmp_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtMovieName.Text = string.Empty;
@@ -140,19 +137,25 @@ namespace SakilaDBFormApp
 
         private void cbxCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtMovieName.Text = string.Empty;
             ShowFilms();
         }
-
-        private void txtCategory_TextChanged(object sender, EventArgs e)
-        {
-            cbxCategories.SelectedIndex = -1;
-            cbxCategories.Text = "Select Category ...";
-        }
+        
 
         private void btnGo_Click_1(object sender, EventArgs e)
         {
             ShowFilms();
+        }
+
+        private void dgvOrders_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex != -1)
+            {
+                string title = dvgMovies.Rows[e.RowIndex].Cells[0].Value.ToString();
+                frmActors form = new frmActors();
+                form.Show();
+                form.GetData(title);
+            }
+            //form.GetDada();
         }
     }
 }

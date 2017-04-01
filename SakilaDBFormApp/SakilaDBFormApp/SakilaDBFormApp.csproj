@@ -72,6 +72,12 @@
     <Compile Include="Forms\frmAdapterLight.designer.cs">
       <DependentUpon>frmAdapterLight.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmActors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmActors.Designer.cs">
+      <DependentUpon>frmActors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmConnection.resx">
@@ -85,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAdapterLight.resx">
       <DependentUpon>frmAdapterLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmActors.resx">
+      <DependentUpon>frmActors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
