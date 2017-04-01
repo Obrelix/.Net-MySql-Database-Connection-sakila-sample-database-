@@ -89,22 +89,20 @@ namespace SakilaDBFormApp
             string sWHERE = string.Empty;
             try
             {
-                if (cbxCategories.SelectedIndex >= 0)
-                {
-                    CategoryID a = (CategoryID)cbxCategories.SelectedItem;
-                    categoryID = Convert.ToInt32(a.id);
-                    sWHERE = "Where category.`category_id`=" + categoryID;
-                }
-                if (txtCategory.Text != "")
-                {
-                    cbxCategories.SelectedIndex = -1;
-                    sWHERE = " Where category.`name` LIKE " + My.Quote(txtCategory.Text + "%");
-                }
                 SQL = "SELECT film.`title`,film.`description`,category.`name`,film.`release_year`,film.`length`,film.`rental_duration`,film.`rental_rate`,film.`special_features`,film.`replacement_cost`" + Environment.NewLine +
                     "FROM film" + Environment.NewLine +
                     "JOIN film_category ON film.`film_id`= film_category.`film_id`" + Environment.NewLine +
                     "JOIN category ON film_category.`category_id`= category.`category_id`";
-                if (txtCategory.Text != string.Empty || cbxCategories.SelectedIndex != -1) SQL += Environment.NewLine + sWHERE;
+
+                sWHERE = " Where film.`title` LIKE " + My.Quote(txtMovieName.Text + "%");
+                if (cbxCategories.SelectedIndex != -1)
+                {
+                    CategoryID a = (CategoryID)cbxCategories.SelectedItem;
+                    categoryID = Convert.ToInt32(a.id);
+                    sWHERE += " AND category.`category_id`=" + categoryID;
+                }
+                
+                if (txtMovieName.Text != string.Empty || cbxCategories.SelectedIndex != -1) SQL += Environment.NewLine + sWHERE;
                 cmd.CommandText = SQL;
                 reader = cmd.ExecuteReader();
 
@@ -130,7 +128,7 @@ namespace SakilaDBFormApp
         }
         private void cbEmp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtCategory.Text = string.Empty;
+            txtMovieName.Text = string.Empty;
             ShowFilms();
         }
         
@@ -142,7 +140,7 @@ namespace SakilaDBFormApp
 
         private void cbxCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtCategory.Text = string.Empty;
+            txtMovieName.Text = string.Empty;
             ShowFilms();
         }
 
