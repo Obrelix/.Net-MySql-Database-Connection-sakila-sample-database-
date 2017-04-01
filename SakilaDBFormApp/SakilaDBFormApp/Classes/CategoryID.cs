@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace SakilaDBFormApp
 {
-    public class IdTitle
+    public class CategoryID
     {
         public string id { get; set; }
-        public string title { get; set; }
+        public string name { get; set; }
 
-        public IdTitle(string id, string title)
+        public CategoryID(string id, string title)
         {
             this.id = id;
-            this.title = title;
+            this.name = title;
         }
 
     }

@@ -37,6 +37,7 @@
             this.btnMovies = new System.Windows.Forms.Button();
             this.pnlReaders = new System.Windows.Forms.Panel();
             this.btnCustomers = new System.Windows.Forms.Button();
+            this.btnCategoryMovies = new System.Windows.Forms.Button();
             this.pnlConnection.SuspendLayout();
             this.pnlReaders.SuspendLayout();
             this.SuspendLayout();
@@ -98,11 +99,11 @@
             // 
             // btnMovies
             // 
-            this.btnMovies.Location = new System.Drawing.Point(10, 14);
+            this.btnMovies.Location = new System.Drawing.Point(442, 193);
             this.btnMovies.Name = "btnMovies";
             this.btnMovies.Size = new System.Drawing.Size(80, 46);
             this.btnMovies.TabIndex = 4;
-            this.btnMovies.Text = "Show Movies";
+            this.btnMovies.Text = "Show/Edit Movies";
             this.btnMovies.UseVisualStyleBackColor = true;
             this.btnMovies.Click += new System.EventHandler(this.btnMovies_Click);
             // 
@@ -110,8 +111,8 @@
             // 
             this.pnlReaders.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
             this.pnlReaders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlReaders.Controls.Add(this.btnCategoryMovies);
             this.pnlReaders.Controls.Add(this.btnCustomers);
-            this.pnlReaders.Controls.Add(this.btnMovies);
             this.pnlReaders.Location = new System.Drawing.Point(432, 105);
             this.pnlReaders.Margin = new System.Windows.Forms.Padding(10);
             this.pnlReaders.Name = "pnlReaders";
@@ -127,12 +128,23 @@
             this.btnCustomers.Text = "Show Customers";
             this.btnCustomers.UseVisualStyleBackColor = true;
             // 
+            // btnCategoryMovies
+            // 
+            this.btnCategoryMovies.Location = new System.Drawing.Point(10, 14);
+            this.btnCategoryMovies.Name = "btnCategoryMovies";
+            this.btnCategoryMovies.Size = new System.Drawing.Size(80, 46);
+            this.btnCategoryMovies.TabIndex = 6;
+            this.btnCategoryMovies.Text = "Show Movies";
+            this.btnCategoryMovies.UseVisualStyleBackColor = true;
+            this.btnCategoryMovies.Click += new System.EventHandler(this.btnCategoryMovies_Click);
+            // 
             // frmStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
             this.ClientSize = new System.Drawing.Size(637, 333);
+            this.Controls.Add(this.btnMovies);
             this.Controls.Add(this.pnlReaders);
             this.Controls.Add(this.pnlConnection);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -155,6 +167,7 @@
         private System.Windows.Forms.Button btnMovies;
         private System.Windows.Forms.Panel pnlReaders;
         private System.Windows.Forms.Button btnCustomers;
+        private System.Windows.Forms.Button btnCategoryMovies;
     }
 }
 

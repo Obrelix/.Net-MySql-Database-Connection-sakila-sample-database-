@@ -12,3 +12,15 @@ C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-databa
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmStart.resources
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmMovies.resources
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmAdapterLight.resources
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\bin\Debug\SakilaDBFormApp.exe.config
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.exe
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.pdb
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\bin\Debug\SakilaDBFormApp.exe
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\bin\Debug\SakilaDBFormApp.pdb
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.csprojResolveAssemblyReference.cache
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmConnection.resources
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmMovies.resources
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmStart.resources
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmAdapterLight.resources
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.Properties.Resources.resources
+C:\Users\Obrelix\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.csproj.GenerateResource.Cache

@@ -16,7 +16,7 @@ namespace SakilaDBFormApp
         OdbcCommand cmd;
         OdbcDataReader reader;
         string SQL;
-        List<IdTitle> ListMovies = new List<IdTitle>();
+        List<CategoryID> ListMovies = new List<CategoryID>();
         DataTable tblMovies = new DataTable();
 
         public frmMovies()
@@ -29,8 +29,8 @@ namespace SakilaDBFormApp
 
         private void loadMovies()
         {
-            IdTitle a;
-            SQL = "SELECT film_id, title FROM film  ";
+            CategoryID a;
+            string SQL = "SELECT category.`category_id`,category.`name` FROM category";
             try
             {
                 cmd.CommandText = SQL;
@@ -39,17 +39,17 @@ namespace SakilaDBFormApp
                 //lblEmployee.Text = "";
                 while (reader.Read())
                 {
-                    a = new IdTitle(reader[0].ToString(),
+                    a = new CategoryID(reader[0].ToString(),
                     //boroume omoios na grapsoume reader[1] bla bla
-                    reader["film_id"].ToString() + " " + reader["title"].ToString());
+                    reader["name"].ToString());
                     ListMovies.Add(a);
                 }
-               // cbxMovies.SelectedIndexChanged -= new EventHandler(cbxMovies_SelectedIndexChanged);
-                bind(cbxMovies);
-                cbxMovies.SelectedIndex = -1;
-                cbxMovies.Text = "Select Movie ... ";
+               cbxCategories.SelectedIndexChanged -= new EventHandler(cbxCategories_SelectedIndexChanged);
+                bind(cbxCategories);
+                cbxCategories.SelectedIndex = -1;
+                cbxCategories.Text = "Select Category ... ";
                // lblEmployee.Text = "";
-               // cbxMovies.SelectedIndexChanged += new EventHandler(cbxMovies_SelectedIndexChanged);
+               cbxCategories.SelectedIndexChanged += new EventHandler(cbxCategories_SelectedIndexChanged);
                 if (reader != null)
                 {
                     reader.Close();
@@ -58,11 +58,6 @@ namespace SakilaDBFormApp
             catch (Exception ex) { MessageBox.Show(ex.Message); }
             finally
             {
-                //Mporoume na to baloume kai mesa sthn try
-                //? einai o telesths melous kai sthn ousia leei an to antikeimeno den einai null proxora
-                //tha mporousame na xrisimopoihsoume using() kai sto teleos den xreiazetai to reader.close
-                //tha to kleisei kai tha to katharisei mono tou
-
                 //reader?.Close(); //if (reader != null) reader.Close();
             }
         }
@@ -73,18 +68,93 @@ namespace SakilaDBFormApp
             cb.DataSource = null;
             cb.DataSource = ListMovies;
             cb.ValueMember = "id";
-            cb.DisplayMember = "title";
+            cb.DisplayMember = "name";
             cb.EndUpdate();
         }
 
         private void frmMovies_Load(object sender, EventArgs e)
         {
             loadMovies();
+            ShowFilms();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            loadMovies();
+            ShowFilms();
+        }
+
+        private void ShowFilms()
+        {
+            int categoryID;
+            string sWHERE = string.Empty;
+            try
+            {
+                if (cbxCategories.SelectedIndex >= 0)
+                {
+                    CategoryID a = (CategoryID)cbxCategories.SelectedItem;
+                    categoryID = Convert.ToInt32(a.id);
+                    sWHERE = "Where category.`category_id`=" + categoryID;
+                }
+                if (txtCategory.Text != "")
+                {
+                    cbxCategories.SelectedIndex = -1;
+                    sWHERE = " Where category.`name` LIKE " + My.Quote(txtCategory.Text + "%");
+                }
+                SQL = "SELECT film.`title`,film.`description`,category.`name`,film.`release_year`,film.`length`,film.`rental_duration`,film.`rental_rate`,film.`special_features`,film.`replacement_cost`" + Environment.NewLine +
+                    "FROM film" + Environment.NewLine +
+                    "JOIN film_category ON film.`film_id`= film_category.`film_id`" + Environment.NewLine +
+                    "JOIN category ON film_category.`category_id`= category.`category_id`";
+                if (txtCategory.Text != string.Empty || cbxCategories.SelectedIndex != -1) SQL += Environment.NewLine + sWHERE;
+                cmd.CommandText = SQL;
+                reader = cmd.ExecuteReader();
+
+                tblMovies.Rows.Clear();
+                tblMovies.Load(reader);
+                dgvOrders.DataSource = tblMovies;
+                lblMovies.Text ="Movies Found: " + tblMovies.Rows.Count.ToString();
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+                
+            }
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+            finally
+            {
+                //reader?.Close();
+            }
+        }
+        private void btnGo_Click(object sender, EventArgs e)
+        {
+           
+        }
+        private void cbEmp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtCategory.Text = string.Empty;
+            ShowFilms();
+        }
+        
+
+        private void dgvOrders_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 1) return;
+        }
+
+        private void cbxCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtCategory.Text = string.Empty;
+            ShowFilms();
+        }
+
+        private void txtCategory_TextChanged(object sender, EventArgs e)
+        {
+            cbxCategories.SelectedIndex = -1;
+            cbxCategories.Text = "Select Category ...";
+        }
+
+        private void btnGo_Click_1(object sender, EventArgs e)
+        {
+            ShowFilms();
         }
     }
 }

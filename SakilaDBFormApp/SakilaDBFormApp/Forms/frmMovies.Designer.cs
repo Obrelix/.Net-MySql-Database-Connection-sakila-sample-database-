@@ -32,21 +32,19 @@
             this.lblConnected = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.btnGo = new System.Windows.Forms.Button();
-            this.txtMovie = new System.Windows.Forms.TextBox();
-            this.cbxMovies = new System.Windows.Forms.ComboBox();
-            this.dtpEos = new System.Windows.Forms.DateTimePicker();
-            this.dtpApo = new System.Windows.Forms.DateTimePicker();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.cbxCategories = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblMovies = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // lblConnected
             // 
             this.lblConnected.AutoSize = true;
-            this.lblConnected.Location = new System.Drawing.Point(699, 9);
+            this.lblConnected.Location = new System.Drawing.Point(764, 9);
             this.lblConnected.Name = "lblConnected";
             this.lblConnected.Size = new System.Drawing.Size(59, 13);
             this.lblConnected.TabIndex = 22;
@@ -54,7 +52,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(424, 9);
+            this.button1.Location = new System.Drawing.Point(12, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 23);
             this.button1.TabIndex = 21;
@@ -65,29 +63,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(574, 19);
+            this.label4.Location = new System.Drawing.Point(586, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Movie ID";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(218, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Εώς";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Από";
+            this.label4.Text = "Category Name:";
             // 
             // dgvOrders
             // 
@@ -97,63 +77,68 @@
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrders.Location = new System.Drawing.Point(12, 67);
             this.dgvOrders.Name = "dgvOrders";
-            this.dgvOrders.Size = new System.Drawing.Size(746, 176);
+            this.dgvOrders.Size = new System.Drawing.Size(809, 282);
             this.dgvOrders.TabIndex = 17;
             // 
             // btnGo
             // 
-            this.btnGo.Location = new System.Drawing.Point(718, 37);
+            this.btnGo.Location = new System.Drawing.Point(781, 34);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(40, 23);
             this.btnGo.TabIndex = 16;
             this.btnGo.Text = "Go";
             this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click_1);
             // 
-            // txtMovie
+            // txtCategory
             // 
-            this.txtMovie.Location = new System.Drawing.Point(577, 39);
-            this.txtMovie.Name = "txtMovie";
-            this.txtMovie.Size = new System.Drawing.Size(100, 20);
-            this.txtMovie.TabIndex = 15;
+            this.txtCategory.Location = new System.Drawing.Point(675, 36);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(100, 20);
+            this.txtCategory.TabIndex = 15;
+            this.txtCategory.TextChanged += new System.EventHandler(this.txtCategory_TextChanged);
             // 
-            // cbxMovies
+            // cbxCategories
             // 
-            this.cbxMovies.FormattingEnabled = true;
-            this.cbxMovies.Location = new System.Drawing.Point(424, 40);
-            this.cbxMovies.Name = "cbxMovies";
-            this.cbxMovies.Size = new System.Drawing.Size(147, 21);
-            this.cbxMovies.TabIndex = 14;
+            this.cbxCategories.FormattingEnabled = true;
+            this.cbxCategories.Location = new System.Drawing.Point(68, 36);
+            this.cbxCategories.Name = "cbxCategories";
+            this.cbxCategories.Size = new System.Drawing.Size(147, 21);
+            this.cbxCategories.TabIndex = 14;
+            this.cbxCategories.SelectedIndexChanged += new System.EventHandler(this.cbxCategories_SelectedIndexChanged);
             // 
-            // dtpEos
+            // label1
             // 
-            this.dtpEos.Location = new System.Drawing.Point(218, 41);
-            this.dtpEos.Name = "dtpEos";
-            this.dtpEos.Size = new System.Drawing.Size(200, 20);
-            this.dtpEos.TabIndex = 13;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(65, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Categories";
             // 
-            // dtpApo
+            // lblMovies
             // 
-            this.dtpApo.Location = new System.Drawing.Point(12, 41);
-            this.dtpApo.Name = "dtpApo";
-            this.dtpApo.Size = new System.Drawing.Size(200, 20);
-            this.dtpApo.TabIndex = 12;
+            this.lblMovies.AutoSize = true;
+            this.lblMovies.Location = new System.Drawing.Point(230, 39);
+            this.lblMovies.Name = "lblMovies";
+            this.lblMovies.Size = new System.Drawing.Size(77, 13);
+            this.lblMovies.TabIndex = 24;
+            this.lblMovies.Text = "Movies Found:";
             // 
             // frmMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 257);
+            this.ClientSize = new System.Drawing.Size(835, 363);
+            this.Controls.Add(this.lblMovies);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblConnected);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvOrders);
             this.Controls.Add(this.btnGo);
-            this.Controls.Add(this.txtMovie);
-            this.Controls.Add(this.cbxMovies);
-            this.Controls.Add(this.dtpEos);
-            this.Controls.Add(this.dtpApo);
+            this.Controls.Add(this.txtCategory);
+            this.Controls.Add(this.cbxCategories);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMovies";
             this.Text = "Movies";
@@ -169,13 +154,11 @@
         private System.Windows.Forms.Label lblConnected;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvOrders;
         private System.Windows.Forms.Button btnGo;
-        private System.Windows.Forms.TextBox txtMovie;
-        private System.Windows.Forms.ComboBox cbxMovies;
-        private System.Windows.Forms.DateTimePicker dtpEos;
-        private System.Windows.Forms.DateTimePicker dtpApo;
+        private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.ComboBox cbxCategories;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMovies;
     }
 }
