@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SakilaDBFormApp.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,6 +54,11 @@ namespace SakilaDBFormApp
         {
             frmMovies form = new frmMovies();
             form.Show();
+        }
+
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            new frmCustomers().Show();
         }
     }
 }

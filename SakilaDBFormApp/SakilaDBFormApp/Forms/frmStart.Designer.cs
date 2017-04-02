@@ -36,9 +36,9 @@
             this.lblConnection = new System.Windows.Forms.Label();
             this.btnMovies = new System.Windows.Forms.Button();
             this.pnlReaders = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnCategoryMovies = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlConnection.SuspendLayout();
             this.pnlReaders.SuspendLayout();
             this.SuspendLayout();
@@ -127,6 +127,15 @@
             this.pnlReaders.Size = new System.Drawing.Size(330, 148);
             this.pnlReaders.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(175, 77);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 46);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Show Payments";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // btnCategoryMovies
             // 
             this.btnCategoryMovies.Location = new System.Drawing.Point(175, 14);
@@ -145,15 +154,7 @@
             this.btnCustomers.TabIndex = 5;
             this.btnCustomers.Text = "Show Customers";
             this.btnCustomers.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(175, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 46);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Show Payments";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // frmStart
             // 
