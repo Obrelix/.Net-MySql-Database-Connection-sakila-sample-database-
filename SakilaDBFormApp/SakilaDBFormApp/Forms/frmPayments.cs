@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace SakilaDBFormApp
 {
-    public partial class frmMovies : Form
+    public partial class frmPayments : Form
     {
         OdbcCommand cmd;
         OdbcDataReader reader;
@@ -19,7 +19,7 @@ namespace SakilaDBFormApp
         List<CategoryID> ListMovies = new List<CategoryID>();
         DataTable tblMovies = new DataTable();
 
-        public frmMovies()
+        public frmPayments()
         {
             InitializeComponent();
 
@@ -89,10 +89,10 @@ namespace SakilaDBFormApp
             string sWHERE = string.Empty;
             try
             {
-                SQL = "SELECT film.`title`,film.`description`,category.`name`,film.`release_year`,film.`length`,film.`rental_duration`,film.`rental_rate`,film.`special_features`,film.`replacement_cost`,film.`film_id`" + Environment.NewLine +
+                SQL = "SELECT film.`title`,film.`description`,category.`name`,film.`release_year`,film.`length`,film.`rental_duration`,film.`rental_rate`,film.`special_features`,film.`replacement_cost`" + Environment.NewLine +
                     "FROM film" + Environment.NewLine +
-                    "LEFT JOIN film_category ON film.`film_id`= film_category.`film_id`" + Environment.NewLine +
-                    "LEFT JOIN category ON film_category.`category_id`= category.`category_id`";
+                    "JOIN film_category ON film.`film_id`= film_category.`film_id`" + Environment.NewLine +
+                    "JOIN category ON film_category.`category_id`= category.`category_id`";
 
                 sWHERE = " Where film.`title` LIKE " + My.Quote(txtMovieName.Text + "%");
                 if (cbxCategories.SelectedIndex != -1)

@@ -33,8 +33,8 @@ namespace SakilaDBFormApp
             {
                 SQL = "SELECT actor.`first_name`,actor.`last_name`" + Environment.NewLine +
                         "FROM actor" + Environment.NewLine +
-                        "JOIN film_actor ON actor.`actor_id`= film_actor.`actor_id`" + Environment.NewLine +
-                        "JOIN film ON film_actor.`film_id`= film.`film_id`" + Environment.NewLine +
+                        "Left JOIN film_actor ON actor.`actor_id`= film_actor.`actor_id`" + Environment.NewLine +
+                        "Left JOIN film ON film_actor.`film_id`= film.`film_id`" + Environment.NewLine +
                     "WHERE film.`title`="+ My.Quote(filmTitle);
                 cmd.CommandText = SQL;
                 reader = cmd.ExecuteReader();
@@ -53,6 +53,10 @@ namespace SakilaDBFormApp
             }
 
         }
-        
+
+        private void frmActors_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -91,6 +91,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmActors";
             this.Text = "Actors";
+            this.Load += new System.EventHandler(this.frmActors_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvActors)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

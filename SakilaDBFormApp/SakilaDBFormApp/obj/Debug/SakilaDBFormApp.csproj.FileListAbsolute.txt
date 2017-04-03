@@ -42,3 +42,4 @@ C:\Users\Stamatis\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-data
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.Forms.frmCustomerMovies.resources
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.Forms.frmCustomers.resources
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmActors.resources
+C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmPayments.resources

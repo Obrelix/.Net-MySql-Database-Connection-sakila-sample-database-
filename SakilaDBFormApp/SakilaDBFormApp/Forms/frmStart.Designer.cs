@@ -36,7 +36,7 @@
             this.lblConnection = new System.Windows.Forms.Label();
             this.btnMovies = new System.Windows.Forms.Button();
             this.pnlReaders = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPayments = new System.Windows.Forms.Button();
             this.btnCategoryMovies = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.pnlConnection.SuspendLayout();
@@ -117,7 +117,7 @@
             this.pnlReaders.BackColor = System.Drawing.Color.Transparent;
             this.pnlReaders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlReaders.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlReaders.Controls.Add(this.button1);
+            this.pnlReaders.Controls.Add(this.btnPayments);
             this.pnlReaders.Controls.Add(this.btnCategoryMovies);
             this.pnlReaders.Controls.Add(this.btnCustomers);
             this.pnlReaders.Controls.Add(this.btnMovies);
@@ -127,15 +127,15 @@
             this.pnlReaders.Size = new System.Drawing.Size(330, 148);
             this.pnlReaders.TabIndex = 5;
             // 
-            // button1
+            // btnPayments
             // 
-            this.button1.Location = new System.Drawing.Point(175, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 46);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Show Payments";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPayments.Location = new System.Drawing.Point(175, 77);
+            this.btnPayments.Name = "btnPayments";
+            this.btnPayments.Size = new System.Drawing.Size(139, 46);
+            this.btnPayments.TabIndex = 7;
+            this.btnPayments.Text = "Show Payments";
+            this.btnPayments.UseVisualStyleBackColor = true;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // btnCategoryMovies
             // 
@@ -186,7 +186,7 @@
         private System.Windows.Forms.Panel pnlReaders;
         private System.Windows.Forms.Button btnCustomers;
         private System.Windows.Forms.Button btnCategoryMovies;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPayments;
     }
 }
 

@@ -90,6 +90,12 @@
     <Compile Include="Forms\frmActors.Designer.cs">
       <DependentUpon>frmActors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPayments.designer.cs">
+      <DependentUpon>frmPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmConnection.resx">
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmActors.resx">
       <DependentUpon>frmActors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPayments.resx">
+      <DependentUpon>frmPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

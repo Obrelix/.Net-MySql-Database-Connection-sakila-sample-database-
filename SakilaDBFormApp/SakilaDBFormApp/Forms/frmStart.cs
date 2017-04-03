@@ -61,9 +61,10 @@ namespace SakilaDBFormApp
             new frmCustomers().Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPayments_Click(object sender, EventArgs e)
         {
-
+            frmPayments form = new frmPayments();
+            form.Show();
         }
     }
 }
