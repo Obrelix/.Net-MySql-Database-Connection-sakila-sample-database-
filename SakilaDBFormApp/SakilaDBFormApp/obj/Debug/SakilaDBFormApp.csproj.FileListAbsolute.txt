@@ -8,7 +8,6 @@ C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-databa
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.exe
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.pdb
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmConnection.resources
-C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmReader2.resources
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmStart.resources
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmMovies.resources
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmAdapterLight.resources
@@ -40,3 +39,6 @@ C:\Users\Stamatis\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-data
 C:\Users\Stamatis\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.csproj.GenerateResource.Cache
 C:\Users\Stamatis\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.Forms.frmCustomers.resources
 C:\Users\Stamatis\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.Forms.frmCustomerMovies.resources
+C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.Forms.frmCustomerMovies.resources
+C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.Forms.frmCustomers.resources
+C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmActors.resources

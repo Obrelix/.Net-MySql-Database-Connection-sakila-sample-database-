@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActors));
             this.lblActors = new System.Windows.Forms.Label();
             this.dgvActors = new System.Windows.Forms.DataGridView();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,9 +39,12 @@
             // lblActors
             // 
             this.lblActors.AutoSize = true;
+            this.lblActors.BackColor = System.Drawing.Color.Transparent;
+            this.lblActors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblActors.ForeColor = System.Drawing.Color.White;
             this.lblActors.Location = new System.Drawing.Point(12, 9);
             this.lblActors.Name = "lblActors";
-            this.lblActors.Size = new System.Drawing.Size(46, 13);
+            this.lblActors.Size = new System.Drawing.Size(60, 17);
             this.lblActors.TabIndex = 1;
             this.lblActors.Text = "Actors : ";
             // 
@@ -54,10 +58,10 @@
             this.dgvActors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.firstName,
             this.lastName});
-            this.dgvActors.Location = new System.Drawing.Point(12, 25);
+            this.dgvActors.Location = new System.Drawing.Point(12, 29);
             this.dgvActors.Name = "dgvActors";
             this.dgvActors.ReadOnly = true;
-            this.dgvActors.Size = new System.Drawing.Size(267, 128);
+            this.dgvActors.Size = new System.Drawing.Size(267, 124);
             this.dgvActors.TabIndex = 2;
             // 
             // firstName
@@ -84,6 +88,7 @@
             this.ClientSize = new System.Drawing.Size(291, 165);
             this.Controls.Add(this.dgvActors);
             this.Controls.Add(this.lblActors);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmActors";
             this.Text = "Actors";
             ((System.ComponentModel.ISupportInitialize)(this.dgvActors)).EndInit();

@@ -142,7 +142,7 @@
             this.Controls.Add(this.lblPort);
             this.Controls.Add(this.lblServer);
             this.Name = "frmConnection";
-            this.Text = "frmDB";
+            this.Text = "Connect";
             this.Load += new System.EventHandler(this.frmConnection_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
