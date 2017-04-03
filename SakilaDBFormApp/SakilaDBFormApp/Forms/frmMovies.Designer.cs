@@ -54,7 +54,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(519, 22);
+            this.label4.Location = new System.Drawing.Point(706, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 20;
@@ -82,14 +82,14 @@
             this.dvgMovies.Name = "dvgMovies";
             this.dvgMovies.ReadOnly = true;
             this.dvgMovies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgMovies.Size = new System.Drawing.Size(809, 282);
+            this.dvgMovies.Size = new System.Drawing.Size(996, 351);
             this.dvgMovies.TabIndex = 17;
             this.dvgMovies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellClick_1);
             // 
             // btnGo
             // 
             this.btnGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGo.Location = new System.Drawing.Point(781, 36);
+            this.btnGo.Location = new System.Drawing.Point(968, 36);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(40, 23);
             this.btnGo.TabIndex = 16;
@@ -100,7 +100,7 @@
             // txtMovieName
             // 
             this.txtMovieName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMovieName.Location = new System.Drawing.Point(522, 38);
+            this.txtMovieName.Location = new System.Drawing.Point(709, 38);
             this.txtMovieName.Name = "txtMovieName";
             this.txtMovieName.Size = new System.Drawing.Size(100, 20);
             this.txtMovieName.TabIndex = 15;
@@ -110,7 +110,7 @@
             // 
             this.cbxCategories.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxCategories.FormattingEnabled = true;
-            this.cbxCategories.Location = new System.Drawing.Point(628, 38);
+            this.cbxCategories.Location = new System.Drawing.Point(815, 38);
             this.cbxCategories.Name = "cbxCategories";
             this.cbxCategories.Size = new System.Drawing.Size(147, 21);
             this.cbxCategories.TabIndex = 14;
@@ -122,7 +122,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(625, 22);
+            this.label1.Location = new System.Drawing.Point(812, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 23;
@@ -231,7 +231,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
-            this.ClientSize = new System.Drawing.Size(835, 363);
+            this.ClientSize = new System.Drawing.Size(1022, 432);
             this.Controls.Add(this.lblMovies);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);

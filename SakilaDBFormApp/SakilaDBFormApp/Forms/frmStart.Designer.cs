@@ -95,11 +95,11 @@
             // 
             this.lblConnection.AutoSize = true;
             this.lblConnection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.lblConnection.Location = new System.Drawing.Point(17, 2);
+            this.lblConnection.Location = new System.Drawing.Point(16, 2);
             this.lblConnection.Name = "lblConnection";
-            this.lblConnection.Size = new System.Drawing.Size(144, 16);
+            this.lblConnection.Size = new System.Drawing.Size(154, 16);
             this.lblConnection.TabIndex = 3;
-            this.lblConnection.Text = "Connect to local DB";
+            this.lblConnection.Text = "Connect to Sakila DB";
             this.lblConnection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMovies
@@ -135,6 +135,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Show Payments";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCategoryMovies
             // 
