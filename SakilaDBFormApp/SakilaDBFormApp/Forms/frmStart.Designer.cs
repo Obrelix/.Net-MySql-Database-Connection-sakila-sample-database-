@@ -36,11 +36,11 @@
             this.lblConnection = new System.Windows.Forms.Label();
             this.btnMovies = new System.Windows.Forms.Button();
             this.pnlReaders = new System.Windows.Forms.Panel();
+            this.btnSales = new System.Windows.Forms.Button();
+            this.btnActors = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
             this.btnCategoryMovies = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
-            this.btnActors = new System.Windows.Forms.Button();
-            this.btnSales = new System.Windows.Forms.Button();
             this.pnlConnection.SuspendLayout();
             this.pnlReaders.SuspendLayout();
             this.SuspendLayout();
@@ -131,6 +131,27 @@
             this.pnlReaders.Size = new System.Drawing.Size(459, 145);
             this.pnlReaders.TabIndex = 5;
             // 
+            // btnSales
+            // 
+            this.btnSales.Location = new System.Drawing.Point(300, 77);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(139, 46);
+            this.btnSales.TabIndex = 9;
+            this.btnSales.Text = "Sales Info";
+            this.btnSales.UseVisualStyleBackColor = true;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
+            // 
+            // btnActors
+            // 
+            this.btnActors.Location = new System.Drawing.Point(300, 14);
+            this.btnActors.Name = "btnActors";
+            this.btnActors.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnActors.Size = new System.Drawing.Size(139, 46);
+            this.btnActors.TabIndex = 8;
+            this.btnActors.Text = "Actors Info";
+            this.btnActors.UseVisualStyleBackColor = true;
+            this.btnActors.Click += new System.EventHandler(this.btnActors_Click);
+            // 
             // btnPayments
             // 
             this.btnPayments.Location = new System.Drawing.Point(155, 77);
@@ -161,27 +182,6 @@
             this.btnCustomers.UseVisualStyleBackColor = true;
             this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
-            // btnActors
-            // 
-            this.btnActors.Location = new System.Drawing.Point(300, 14);
-            this.btnActors.Name = "btnActors";
-            this.btnActors.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnActors.Size = new System.Drawing.Size(139, 46);
-            this.btnActors.TabIndex = 8;
-            this.btnActors.Text = "Actors Info";
-            this.btnActors.UseVisualStyleBackColor = true;
-            this.btnActors.Click += new System.EventHandler(this.btnActors_Click);
-            // 
-            // btnSales
-            // 
-            this.btnSales.Location = new System.Drawing.Point(300, 77);
-            this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(139, 46);
-            this.btnSales.TabIndex = 9;
-            this.btnSales.Text = "Sales Info";
-            this.btnSales.UseVisualStyleBackColor = true;
-            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
-            // 
             // frmStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +191,7 @@
             this.Controls.Add(this.pnlReaders);
             this.Controls.Add(this.pnlConnection);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(653, 371);
             this.Name = "frmStart";
             this.Text = "Sakila Video Club";
             this.pnlConnection.ResumeLayout(false);
