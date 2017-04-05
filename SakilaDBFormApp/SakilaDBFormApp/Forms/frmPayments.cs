@@ -27,82 +27,39 @@ namespace SakilaDBFormApp
             cmd.Connection = DB.Cn;
         }
 
-        private void loadMovies()
-        {
-            CategoryID a;
-            string SQL = "SELECT category.`category_id`,category.`name` FROM category";
-            try
-            {
-                cmd.CommandText = SQL;
-                reader = cmd.ExecuteReader();
-                ListMovies.Clear();
-                //lblEmployee.Text = "";
-                while (reader.Read())
-                {
-                    a = new CategoryID(reader[0].ToString(),
-                    //boroume omoios na grapsoume reader[1] bla bla
-                    reader["name"].ToString());
-                    ListMovies.Add(a);
-                }
-               cbxCategories.SelectedIndexChanged -= new EventHandler(cbxCategories_SelectedIndexChanged);
-                bind(cbxCategories);
-                cbxCategories.SelectedIndex = -1;
-                cbxCategories.Text = "Select Category ... ";
-               // lblEmployee.Text = "";
-               cbxCategories.SelectedIndexChanged += new EventHandler(cbxCategories_SelectedIndexChanged);
-                if (reader != null)
-                {
-                    reader.Close();
-                }
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-            finally
-            {
-                //reader?.Close(); //if (reader != null) reader.Close();
-            }
-        }
+       
 
-        private void bind(ComboBox cb)
-        {
-            cb.BeginUpdate();
-            cb.DataSource = null;
-            cb.DataSource = ListMovies;
-            cb.ValueMember = "id";
-            cb.DisplayMember = "name";
-            cb.EndUpdate();
-        }
+        
 
         private void frmMovies_Load(object sender, EventArgs e)
         {
-            loadMovies();
-            ShowFilms();
+           
+            ShowPayments();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ShowFilms();
+            ShowPayments();
         }
 
-        private void ShowFilms()
+        private void ShowPayments()
         {
-            int categoryID;
+            string from, to;
             string sWHERE = string.Empty;
             try
             {
-                SQL = "SELECT film.`title`,film.`description`,category.`name`,film.`release_year`,film.`length`,film.`rental_duration`,film.`rental_rate`,film.`special_features`,film.`replacement_cost`" + Environment.NewLine +
-                    "FROM film" + Environment.NewLine +
-                    "JOIN film_category ON film.`film_id`= film_category.`film_id`" + Environment.NewLine +
-                    "JOIN category ON film_category.`category_id`= category.`category_id`";
+                from = dtpFrom.Value.ToString("yyyy-MM-dd");
+                to = dtpTo.Value.ToString("yyyy-MM-dd");
+                sWHERE = "Where payment_date BETWEEN'" + from + "'AND'" + to + "'"; 
 
-                sWHERE = " Where film.`title` LIKE " + My.Quote(txtMovieName.Text + "%");
-                if (cbxCategories.SelectedIndex != -1)
-                {
-                    CategoryID a = (CategoryID)cbxCategories.SelectedItem;
-                    categoryID = Convert.ToInt32(a.id);
-                    sWHERE += " AND category.`category_id`=" + categoryID;
-                }
-                
-                if (txtMovieName.Text != string.Empty || cbxCategories.SelectedIndex != -1) SQL += Environment.NewLine + sWHERE;
+                SQL = "SELECT payment.`payment_id`,payment.`amount`,payment.`payment_date`,film.`title`,customer.`last_name`,customer.`first_name`" + Environment.NewLine +
+                    "FROM payment" + Environment.NewLine +
+                    "LEFT JOIN customer ON payment.`customer_id` = customer.`customer_id`" + Environment.NewLine +
+                    "LEFT JOIN rental ON customer.`customer_id` = rental.`customer_id`" + Environment.NewLine +
+                    "LEFT JOIN inventory ON inventory.`inventory_id` = rental.`rental_id`" + Environment.NewLine +
+                    "LEFT JOIN film ON film.`film_id` = inventory.`film_id`";
+
+                SQL += sWHERE;
                 cmd.CommandText = SQL;
                 reader = cmd.ExecuteReader();
 
@@ -125,8 +82,8 @@ namespace SakilaDBFormApp
 
         private void cbEmp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtMovieName.Text = string.Empty;
-            ShowFilms();
+            
+            ShowPayments();
         }
         
 
@@ -137,13 +94,13 @@ namespace SakilaDBFormApp
 
         private void cbxCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ShowFilms();
+            ShowPayments();
         }
         
 
         private void btnGo_Click_1(object sender, EventArgs e)
         {
-            ShowFilms();
+            ShowPayments();
         }
 
         private void dgvOrders_CellClick_1(object sender, DataGridViewCellEventArgs e)
@@ -157,10 +114,6 @@ namespace SakilaDBFormApp
             //form.GetDada();
         }
 
-        private void txtMovieName_TextChanged(object sender, EventArgs e)
-        {
-            cbxCategories.SelectedIndex = -1;
-            cbxCategories.Text = "Select Category ... ";
-        }
+        
     }
 }
