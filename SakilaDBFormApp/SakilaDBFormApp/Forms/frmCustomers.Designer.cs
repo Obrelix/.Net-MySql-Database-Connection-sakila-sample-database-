@@ -35,30 +35,42 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.customer_fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customer_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customer_lname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customer_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customer_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCustomers)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dvgCustomers
             // 
+            this.dvgCustomers.AllowUserToAddRows = false;
             this.dvgCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dvgCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.customer_fname,
+            this.customer_id,
             this.customer_lname,
             this.customer_email,
-            this.customer_id});
+            this.Address,
+            this.Phone,
+            this.City,
+            this.Country,
+            this.Notes,
+            this.SID});
             this.dvgCustomers.Location = new System.Drawing.Point(8, 80);
             this.dvgCustomers.Name = "dvgCustomers";
+            this.dvgCustomers.ReadOnly = true;
             this.dvgCustomers.Size = new System.Drawing.Size(946, 408);
             this.dvgCustomers.TabIndex = 0;
-            this.dvgCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCustomers_CellClick);
+            this.dvgCustomers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCustomers_CellClick);
             // 
             // panel1
             // 
@@ -117,34 +129,88 @@
             this.txtCustomerName.Size = new System.Drawing.Size(109, 20);
             this.txtCustomerName.TabIndex = 0;
             // 
-            // customer_fname
+            // customer_id
             // 
-            this.customer_fname.DataPropertyName = "first_name";
-            this.customer_fname.Frozen = true;
-            this.customer_fname.HeaderText = "First Name";
-            this.customer_fname.Name = "customer_fname";
-            this.customer_fname.Width = 82;
+            this.customer_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.customer_id.DataPropertyName = "ID";
+            this.customer_id.Frozen = true;
+            this.customer_id.HeaderText = "ID";
+            this.customer_id.Name = "customer_id";
+            this.customer_id.ReadOnly = true;
+            this.customer_id.Width = 43;
             // 
             // customer_lname
             // 
-            this.customer_lname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.customer_lname.DataPropertyName = "last_name";
-            this.customer_lname.HeaderText = "Last Name";
+            this.customer_lname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.customer_lname.DataPropertyName = "FullName";
+            this.customer_lname.Frozen = true;
+            this.customer_lname.HeaderText = "Name";
             this.customer_lname.Name = "customer_lname";
+            this.customer_lname.ReadOnly = true;
+            this.customer_lname.Width = 60;
             // 
             // customer_email
             // 
-            this.customer_email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.customer_email.DataPropertyName = "email";
+            this.customer_email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.customer_email.DataPropertyName = "E-Mail";
             this.customer_email.HeaderText = "E-mail";
             this.customer_email.Name = "customer_email";
+            this.customer_email.ReadOnly = true;
+            this.customer_email.Width = 60;
             // 
-            // customer_id
+            // Address
             // 
-            this.customer_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.customer_id.DataPropertyName = "customer_id";
-            this.customer_id.HeaderText = "ID";
-            this.customer_id.Name = "customer_id";
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Width = 70;
+            // 
+            // Phone
+            // 
+            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            this.Phone.Width = 63;
+            // 
+            // City
+            // 
+            this.City.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.City.DataPropertyName = "City";
+            this.City.HeaderText = "City";
+            this.City.Name = "City";
+            this.City.ReadOnly = true;
+            this.City.Width = 49;
+            // 
+            // Country
+            // 
+            this.Country.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Country.DataPropertyName = "Country";
+            this.Country.HeaderText = "Country";
+            this.Country.Name = "Country";
+            this.Country.ReadOnly = true;
+            this.Country.Width = 68;
+            // 
+            // Notes
+            // 
+            this.Notes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Notes.DataPropertyName = "Notes";
+            this.Notes.HeaderText = "Notes";
+            this.Notes.Name = "Notes";
+            this.Notes.ReadOnly = true;
+            this.Notes.Width = 60;
+            // 
+            // SID
+            // 
+            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SID.DataPropertyName = "SID";
+            this.SID.HeaderText = "Store ID";
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            this.SID.Width = 71;
             // 
             // frmCustomers
             // 
@@ -173,9 +239,14 @@
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customer_fname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customer_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn customer_lname;
         private System.Windows.Forms.DataGridViewTextBoxColumn customer_email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customer_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn City;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Country;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
     }
 }

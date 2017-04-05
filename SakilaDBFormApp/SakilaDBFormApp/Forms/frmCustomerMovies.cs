@@ -28,7 +28,7 @@ namespace SakilaDBFormApp.Forms
             this.customerLastName = customerLastName;
             cmd = new OdbcCommand();
             cmd.Connection = DB.Cn;
-            this.Text = customerFirstName + " " + customerLastName;
+            this.Text =" Customer: " +customerFirstName + " " + customerLastName;
             lblCustomerName.Text = customerFirstName + " " + customerLastName + " rentals:";
         }
 

@@ -28,12 +28,26 @@ namespace SakilaDBFormApp.Forms
 
         private void showCustomers()
         {
-            SQL = "SELECT first_name,last_name,email,customer_id FROM customer";
+            SQL = "SELECT" + Environment.NewLine +
+                   "customer.`customer_id` AS ID," + Environment.NewLine +
+                    "CONCAT(customer.`first_name`, _utf8' ', customer.`last_name`) AS `FullName`," + Environment.NewLine +
+                    "customer.`email` AS `E-Mail`," + Environment.NewLine +
+                    "address.`address` AS `Address`," + Environment.NewLine +
+                    "address.`postal_code` AS `Zip Code`," + Environment.NewLine +
+                    "address.`phone` AS `Phone`," + Environment.NewLine +
+                    "city.`city` AS City," + Environment.NewLine +
+                    "country.`country` AS Country," + Environment.NewLine +
+                    "IF(customer.`active`, _utf8'active', _utf8'') AS `Notes`," + Environment.NewLine +
+                    "customer.`store_id` AS SID " + Environment.NewLine +
+                    "FROM customer" + Environment.NewLine +
+                    "JOIN address ON customer.`address_id`= address.`address_id`" + Environment.NewLine +
+                    "JOIN city ON address.`city_id`= city.`city_id`" + Environment.NewLine +
+                    "JOIN country ON city.`country_id`= country.`country_id`" + Environment.NewLine;
             try
             {
                 if (txtCustomerName.Text != string.Empty)
                 {
-                    string sWhere = " Where last_name LIKE " + My.Quote(txtCustomerName.Text + "%");
+                    string sWhere = "Where last_name LIKE " + My.Quote(txtCustomerName.Text + "%");
                     SQL += Environment.NewLine + sWhere;
                 }
 
@@ -64,9 +78,8 @@ namespace SakilaDBFormApp.Forms
         private void dvgCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Δυο μεταβλητές για πιο σωστο ερωτημα(SQL)
-            string customerFirstName = dvgCustomers.Rows[e.RowIndex].Cells[0].Value.ToString();
-            string customerLastName = dvgCustomers.Rows[e.RowIndex].Cells[1].Value.ToString();
-            new frmCustomerMovies(customerFirstName, customerLastName).Show();
+            string customerName = dvgCustomers.Rows[e.RowIndex].Cells[1].Value.ToString();
+            new frmCustomerMovies(customerName.Split(' ').First(), customerName.Split(' ').Last()).Show();
         }
     }
 }
