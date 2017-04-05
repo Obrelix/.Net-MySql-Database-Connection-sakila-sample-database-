@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSales));
             this.dgvSales = new System.Windows.Forms.DataGridView();
-            this.lblSales = new System.Windows.Forms.Label();
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total_sales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblSales = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,18 +52,6 @@
             this.dgvSales.Size = new System.Drawing.Size(392, 415);
             this.dgvSales.TabIndex = 4;
             // 
-            // lblSales
-            // 
-            this.lblSales.AutoSize = true;
-            this.lblSales.BackColor = System.Drawing.Color.Transparent;
-            this.lblSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblSales.ForeColor = System.Drawing.Color.White;
-            this.lblSales.Location = new System.Drawing.Point(12, 10);
-            this.lblSales.Name = "lblSales";
-            this.lblSales.Size = new System.Drawing.Size(43, 17);
-            this.lblSales.TabIndex = 3;
-            this.lblSales.Text = "Sales";
-            // 
             // category
             // 
             this.category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -79,14 +68,28 @@
             this.total_sales.Name = "total_sales";
             this.total_sales.ReadOnly = true;
             // 
+            // lblSales
+            // 
+            this.lblSales.AutoSize = true;
+            this.lblSales.BackColor = System.Drawing.Color.Transparent;
+            this.lblSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblSales.ForeColor = System.Drawing.Color.White;
+            this.lblSales.Location = new System.Drawing.Point(12, 10);
+            this.lblSales.Name = "lblSales";
+            this.lblSales.Size = new System.Drawing.Size(43, 17);
+            this.lblSales.TabIndex = 3;
+            this.lblSales.Text = "Sales";
+            // 
             // frmSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(416, 456);
             this.Controls.Add(this.dgvSales);
             this.Controls.Add(this.lblSales);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSales";
             this.Text = "frmSales";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).EndInit();

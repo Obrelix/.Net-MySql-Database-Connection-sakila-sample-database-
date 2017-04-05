@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActorsInfo));
             this.dgvActors = new System.Windows.Forms.DataGridView();
-            this.lblActors = new System.Windows.Forms.Label();
             this.AID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.film_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblActors = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActors)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,21 +51,8 @@
             this.film_info});
             this.dgvActors.Location = new System.Drawing.Point(12, 67);
             this.dgvActors.Name = "dgvActors";
-            this.dgvActors.Size = new System.Drawing.Size(583, 322);
+            this.dgvActors.Size = new System.Drawing.Size(1103, 322);
             this.dgvActors.TabIndex = 0;
-            // 
-            // lblActors
-            // 
-            this.lblActors.AutoSize = true;
-            this.lblActors.BackColor = System.Drawing.Color.Transparent;
-            this.lblActors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblActors.ForeColor = System.Drawing.Color.White;
-            this.lblActors.Location = new System.Drawing.Point(12, 28);
-            this.lblActors.Name = "lblActors";
-            this.lblActors.Size = new System.Drawing.Size(48, 17);
-            this.lblActors.TabIndex = 1;
-            this.lblActors.Text = "Actors";
-            this.lblActors.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AID
             // 
@@ -98,14 +86,29 @@
             this.film_info.Name = "film_info";
             this.film_info.Width = 76;
             // 
+            // lblActors
+            // 
+            this.lblActors.AutoSize = true;
+            this.lblActors.BackColor = System.Drawing.Color.Transparent;
+            this.lblActors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblActors.ForeColor = System.Drawing.Color.White;
+            this.lblActors.Location = new System.Drawing.Point(12, 28);
+            this.lblActors.Name = "lblActors";
+            this.lblActors.Size = new System.Drawing.Size(48, 17);
+            this.lblActors.TabIndex = 1;
+            this.lblActors.Text = "Actors";
+            this.lblActors.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmActorsInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
-            this.ClientSize = new System.Drawing.Size(607, 401);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1127, 401);
             this.Controls.Add(this.lblActors);
             this.Controls.Add(this.dgvActors);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmActorsInfo";
             this.Text = "frmActorsInfo";
             this.Load += new System.EventHandler(this.frmActorsInfo_Load);

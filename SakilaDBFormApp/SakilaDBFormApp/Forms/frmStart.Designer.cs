@@ -125,7 +125,7 @@
             this.pnlReaders.Controls.Add(this.btnCategoryMovies);
             this.pnlReaders.Controls.Add(this.btnCustomers);
             this.pnlReaders.Controls.Add(this.btnMovies);
-            this.pnlReaders.Location = new System.Drawing.Point(96, 114);
+            this.pnlReaders.Location = new System.Drawing.Point(91, 114);
             this.pnlReaders.Margin = new System.Windows.Forms.Padding(10);
             this.pnlReaders.Name = "pnlReaders";
             this.pnlReaders.Size = new System.Drawing.Size(459, 145);
@@ -187,10 +187,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
-            this.ClientSize = new System.Drawing.Size(637, 333);
+            this.ClientSize = new System.Drawing.Size(645, 333);
             this.Controls.Add(this.pnlReaders);
             this.Controls.Add(this.pnlConnection);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(661, 371);
             this.MinimumSize = new System.Drawing.Size(653, 371);
             this.Name = "frmStart";
             this.Text = "Sakila Video Club";

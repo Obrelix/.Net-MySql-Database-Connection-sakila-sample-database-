@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayments));
             this.dvgPayments = new System.Windows.Forms.DataGridView();
+            this.payment_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customer_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payment_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.store_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGo = new System.Windows.Forms.Button();
             this.lblPayments = new System.Windows.Forms.Label();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
@@ -40,12 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxStore = new System.Windows.Forms.ComboBox();
-            this.payment_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customer_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.payment_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.store_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPayments)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +71,59 @@
             this.dvgPayments.Size = new System.Drawing.Size(938, 351);
             this.dvgPayments.TabIndex = 17;
             this.dvgPayments.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgPayments_CellDoubleClick);
+            // 
+            // payment_id
+            // 
+            this.payment_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.payment_id.DataPropertyName = "payment_id";
+            this.payment_id.HeaderText = "Payment ID";
+            this.payment_id.Name = "payment_id";
+            this.payment_id.ReadOnly = true;
+            this.payment_id.Width = 80;
+            // 
+            // customer_name
+            // 
+            this.customer_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.customer_name.DataPropertyName = "Customer";
+            this.customer_name.HeaderText = "Customer Full Name";
+            this.customer_name.Name = "customer_name";
+            this.customer_name.ReadOnly = true;
+            this.customer_name.Width = 90;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Customer E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 98;
+            // 
+            // amount
+            // 
+            this.amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.amount.DataPropertyName = "amount";
+            this.amount.HeaderText = "Amount ($)";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            this.amount.Width = 77;
+            // 
+            // payment_date
+            // 
+            this.payment_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.payment_date.DataPropertyName = "payment_date";
+            this.payment_date.HeaderText = "Payment Date";
+            this.payment_date.Name = "payment_date";
+            this.payment_date.ReadOnly = true;
+            this.payment_date.Width = 91;
+            // 
+            // store_address
+            // 
+            this.store_address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.store_address.DataPropertyName = "StoreAddress";
+            this.store_address.HeaderText = "Store Address";
+            this.store_address.Name = "store_address";
+            this.store_address.ReadOnly = true;
             // 
             // btnGo
             // 
@@ -180,65 +233,13 @@
             this.cbxStore.TabIndex = 33;
             this.cbxStore.SelectedIndexChanged += new System.EventHandler(this.cbxStore_SelectedIndexChanged);
             // 
-            // payment_id
-            // 
-            this.payment_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.payment_id.DataPropertyName = "payment_id";
-            this.payment_id.HeaderText = "Payment ID";
-            this.payment_id.Name = "payment_id";
-            this.payment_id.ReadOnly = true;
-            this.payment_id.Width = 87;
-            // 
-            // customer_name
-            // 
-            this.customer_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.customer_name.DataPropertyName = "Customer";
-            this.customer_name.HeaderText = "Customer Full Name";
-            this.customer_name.Name = "customer_name";
-            this.customer_name.ReadOnly = true;
-            this.customer_name.Width = 90;
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Customer E-mail";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 98;
-            // 
-            // amount
-            // 
-            this.amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.amount.DataPropertyName = "amount";
-            this.amount.HeaderText = "Amount ($)";
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            this.amount.Width = 77;
-            // 
-            // payment_date
-            // 
-            this.payment_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.payment_date.DataPropertyName = "payment_date";
-            this.payment_date.HeaderText = "Payment Date";
-            this.payment_date.Name = "payment_date";
-            this.payment_date.ReadOnly = true;
-            this.payment_date.Width = 91;
-            // 
-            // store_address
-            // 
-            this.store_address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.store_address.DataPropertyName = "StoreAddress";
-            this.store_address.HeaderText = "Store Address";
-            this.store_address.Name = "store_address";
-            this.store_address.ReadOnly = true;
-            // 
             // frmPayments
             // 
             this.AcceptButton = this.btnGo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(964, 433);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxStore);

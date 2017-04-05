@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomerMovies));
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.dvgCustMovies = new System.Windows.Forms.DataGridView();
             this.film_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +52,7 @@
             // 
             // dvgCustMovies
             // 
+            this.dvgCustMovies.AllowUserToAddRows = false;
             this.dvgCustMovies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -62,7 +64,8 @@
             this.rent_id});
             this.dvgCustMovies.Location = new System.Drawing.Point(12, 29);
             this.dvgCustMovies.Name = "dvgCustMovies";
-            this.dvgCustMovies.Size = new System.Drawing.Size(402, 278);
+            this.dvgCustMovies.ReadOnly = true;
+            this.dvgCustMovies.Size = new System.Drawing.Size(685, 278);
             this.dvgCustMovies.TabIndex = 1;
             // 
             // film_id
@@ -70,6 +73,7 @@
             this.film_id.DataPropertyName = "film_id";
             this.film_id.HeaderText = "Film ID";
             this.film_id.Name = "film_id";
+            this.film_id.ReadOnly = true;
             // 
             // film_name
             // 
@@ -77,6 +81,7 @@
             this.film_name.DataPropertyName = "title";
             this.film_name.HeaderText = "Film Name";
             this.film_name.Name = "film_name";
+            this.film_name.ReadOnly = true;
             // 
             // return_date
             // 
@@ -84,6 +89,7 @@
             this.return_date.DataPropertyName = "return_date";
             this.return_date.HeaderText = "Return Date";
             this.return_date.Name = "return_date";
+            this.return_date.ReadOnly = true;
             // 
             // rent_id
             // 
@@ -91,15 +97,18 @@
             this.rent_id.DataPropertyName = "rental_id";
             this.rent_id.HeaderText = "Rental ID";
             this.rent_id.Name = "rent_id";
+            this.rent_id.ReadOnly = true;
             // 
             // frmCustomerMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
-            this.ClientSize = new System.Drawing.Size(426, 319);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(709, 319);
             this.Controls.Add(this.dvgCustMovies);
             this.Controls.Add(this.lblCustomerName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCustomerMovies";
             this.Text = "Movies";
             this.Load += new System.EventHandler(this.frmCustomerMovies_Load);

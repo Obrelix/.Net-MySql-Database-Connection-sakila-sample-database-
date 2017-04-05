@@ -59,7 +59,7 @@
             this.dgvFilms.Location = new System.Drawing.Point(12, 29);
             this.dgvFilms.Name = "dgvFilms";
             this.dgvFilms.ReadOnly = true;
-            this.dgvFilms.Size = new System.Drawing.Size(392, 124);
+            this.dgvFilms.Size = new System.Drawing.Size(392, 44);
             this.dgvFilms.TabIndex = 2;
             this.dgvFilms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilms_CellContentClick);
             // 
@@ -76,10 +76,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
-            this.ClientSize = new System.Drawing.Size(416, 165);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(416, 85);
             this.Controls.Add(this.dgvFilms);
             this.Controls.Add(this.lblFilms);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(432, 123);
+            this.MinimumSize = new System.Drawing.Size(432, 123);
             this.Name = "frmMoviesPay";
             this.Text = "Films";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilms)).EndInit();

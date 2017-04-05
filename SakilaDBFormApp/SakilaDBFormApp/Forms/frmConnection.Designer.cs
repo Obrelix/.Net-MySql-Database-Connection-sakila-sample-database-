@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConnection));
             this.lblServer = new System.Windows.Forms.Label();
             this.lblPort = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
@@ -130,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnDesconnect);
@@ -141,6 +143,7 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblPort);
             this.Controls.Add(this.lblServer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConnection";
             this.Text = "Connect";
             this.Load += new System.EventHandler(this.frmConnection_Load);
