@@ -88,13 +88,14 @@ namespace SakilaDBFormApp
             {
                 from = dtpFrom.Value.ToString("yyyy-MM-dd");
                 to = dtpTo.Value.ToString("yyyy-MM-dd");
-                sWHERE = "WHERE payment.`payment_date` BETWEEN '" + from + "' AND '" + to + "'";
 
                 SQL = "SELECT payment.`payment_id`,CONCAT(customer.`first_name`,' ', customer.`last_name`) AS Customer,customer.`email`,payment.`amount`,payment.`payment_date`, address.`address` AS StoreAddress" + Environment.NewLine +
                     "FROM payment" + Environment.NewLine +
-                    "LEFT JOIN customer ON payment.`customer_id`=customer.`customer_id`" + Environment.NewLine +
-                    "LEFT JOIN store ON customer.`store_id`=store.`store_id`" + Environment.NewLine +
-                    "LEFT JOIN address ON store.`address_id`=address.`address_id`" + Environment.NewLine;
+                    "JOIN customer ON payment.`customer_id`=customer.`customer_id`" + Environment.NewLine +
+                    "JOIN store ON customer.`store_id`=store.`store_id`" + Environment.NewLine +
+                    "JOIN address ON store.`address_id`=address.`address_id`" + Environment.NewLine;
+
+                sWHERE = "WHERE payment.`payment_date` BETWEEN '" + from + "' AND '" + to + "'";
                 sWHERE += " AND customer.`last_name` LIKE '%" + txtCustomerLName.Text + "%'";
                 if (cbxStore.SelectedIndex != -1)
                 {

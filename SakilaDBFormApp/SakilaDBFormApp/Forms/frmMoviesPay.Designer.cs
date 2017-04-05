@@ -61,6 +61,7 @@
             this.dgvFilms.ReadOnly = true;
             this.dgvFilms.Size = new System.Drawing.Size(392, 124);
             this.dgvFilms.TabIndex = 2;
+            this.dgvFilms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilms_CellContentClick);
             // 
             // films
             // 

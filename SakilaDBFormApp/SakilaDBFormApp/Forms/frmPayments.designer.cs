@@ -103,7 +103,6 @@
             this.dtpFrom.Size = new System.Drawing.Size(200, 20);
             this.dtpFrom.TabIndex = 25;
             this.dtpFrom.Value = new System.DateTime(2003, 4, 5, 14, 26, 0, 0);
-           
             // 
             // dtpTo
             // 
@@ -113,7 +112,6 @@
             this.dtpTo.Size = new System.Drawing.Size(201, 20);
             this.dtpTo.TabIndex = 26;
             this.dtpTo.Value = new System.DateTime(2007, 4, 5, 14, 26, 0, 0);
-            
             // 
             // label4
             // 
@@ -126,7 +124,6 @@
             this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 29;
             this.label4.Text = "Customer Last Name:";
-           
             // 
             // txtCustomerLName
             // 
@@ -148,7 +145,6 @@
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 31;
             this.label2.Text = "Date From:";
-            
             // 
             // label3
             // 
@@ -161,7 +157,6 @@
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 32;
             this.label3.Text = "Date To:";
-            
             // 
             // label1
             // 
@@ -174,7 +169,6 @@
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 34;
             this.label1.Text = "Store";
-            
             // 
             // cbxStore
             // 
@@ -188,7 +182,7 @@
             // 
             // payment_id
             // 
-            this.payment_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.payment_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.payment_id.DataPropertyName = "payment_id";
             this.payment_id.HeaderText = "Payment ID";
             this.payment_id.Name = "payment_id";
@@ -197,7 +191,7 @@
             // 
             // customer_name
             // 
-            this.customer_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.customer_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.customer_name.DataPropertyName = "Customer";
             this.customer_name.HeaderText = "Customer Full Name";
             this.customer_name.Name = "customer_name";
@@ -206,7 +200,7 @@
             // 
             // email
             // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.email.DataPropertyName = "email";
             this.email.HeaderText = "Customer E-mail";
             this.email.Name = "email";
@@ -215,7 +209,7 @@
             // 
             // amount
             // 
-            this.amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.amount.DataPropertyName = "amount";
             this.amount.HeaderText = "Amount ($)";
             this.amount.Name = "amount";
@@ -224,7 +218,7 @@
             // 
             // payment_date
             // 
-            this.payment_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.payment_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.payment_date.DataPropertyName = "payment_date";
             this.payment_date.HeaderText = "Payment Date";
             this.payment_date.Name = "payment_date";
@@ -245,7 +239,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SakilaDBFormApp.Properties.Resources.cinema;
-            this.ClientSize = new System.Drawing.Size(964, 432);
+            this.ClientSize = new System.Drawing.Size(964, 433);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxStore);
             this.Controls.Add(this.label3);

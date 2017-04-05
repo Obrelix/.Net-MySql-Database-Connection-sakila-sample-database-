@@ -21,7 +21,7 @@
 </table>
 <table name="address" view="colnames">
 <left>146</left>
-<top>411</top>
+<top>441</top>
 <width>114</width>
 <height>194</height>
 <sql_create_table>CREATE TABLE `address` (
@@ -52,7 +52,7 @@
 </table>
 <table name="city" view="colnames">
 <left>284</left>
-<top>546</top>
+<top>558</top>
 <width>153</width>
 <height>129</height>
 <sql_create_table>CREATE TABLE `city` (
@@ -66,8 +66,8 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=601 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="country" view="colnames">
-<left>20</left>
-<top>581</top>
+<left>21</left>
+<top>591</top>
 <width>119</width>
 <height>112</height>
 <sql_create_table>CREATE TABLE `country` (
@@ -78,8 +78,8 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="customer" view="colnames">
-<left>472</left>
-<top>394</top>
+<left>465</left>
+<top>357</top>
 <width>116</width>
 <height>226</height>
 <sql_create_table>CREATE TABLE `customer` (
@@ -209,8 +209,8 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=16050 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="rental" view="colnames">
-<left>481</left>
-<top>109</top>
+<left>470</left>
+<top>111</top>
 <width>116</width>
 <height>180</height>
 <sql_create_table>CREATE TABLE `rental` (
@@ -232,8 +232,8 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=16050 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="staff" view="colnames">
-<left>6</left>
-<top>191</top>
+<left>10</left>
+<top>192</top>
 <width>112</width>
 <height>244</height>
 <sql_create_table>CREATE TABLE `staff` (
@@ -256,8 +256,8 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="store" view="colnames">
-<left>285</left>
-<top>294</top>
+<left>284</left>
+<top>293</top>
 <width>146</width>
 <height>141</height>
 <sql_create_table>CREATE TABLE `store` (

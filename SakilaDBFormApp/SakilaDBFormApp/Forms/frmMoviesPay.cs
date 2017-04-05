@@ -33,8 +33,7 @@ namespace SakilaDBFormApp
             {
                 SQL = "SELECT film.`title`" + Environment.NewLine +
                         "FROM payment" + Environment.NewLine +
-                        "JOIN customer ON payment.`customer_id`=customer.`customer_id`" + Environment.NewLine +
-                        "JOIN rental ON customer.`customer_id`=rental.`customer_id`" + Environment.NewLine +
+                        "JOIN rental ON payment.`rental_id`=rental.`rental_id`" + Environment.NewLine +
                         "JOIN inventory ON rental.`inventory_id`=inventory.`inventory_id`" + Environment.NewLine +
                         "JOIN film ON inventory.`film_id`=film.`film_id`" + Environment.NewLine +
                     "WHERE payment.`payment_id`="+ payment_id;
@@ -56,7 +55,10 @@ namespace SakilaDBFormApp
 
         }
 
-       
+        private void dgvFilms_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 
