@@ -39,6 +39,8 @@
             this.btnPayments = new System.Windows.Forms.Button();
             this.btnCategoryMovies = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
+            this.btnActors = new System.Windows.Forms.Button();
+            this.btnSales = new System.Windows.Forms.Button();
             this.pnlConnection.SuspendLayout();
             this.pnlReaders.SuspendLayout();
             this.SuspendLayout();
@@ -117,19 +119,21 @@
             this.pnlReaders.BackColor = System.Drawing.Color.Transparent;
             this.pnlReaders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlReaders.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlReaders.Controls.Add(this.btnSales);
+            this.pnlReaders.Controls.Add(this.btnActors);
             this.pnlReaders.Controls.Add(this.btnPayments);
             this.pnlReaders.Controls.Add(this.btnCategoryMovies);
             this.pnlReaders.Controls.Add(this.btnCustomers);
             this.pnlReaders.Controls.Add(this.btnMovies);
-            this.pnlReaders.Location = new System.Drawing.Point(156, 114);
+            this.pnlReaders.Location = new System.Drawing.Point(96, 114);
             this.pnlReaders.Margin = new System.Windows.Forms.Padding(10);
             this.pnlReaders.Name = "pnlReaders";
-            this.pnlReaders.Size = new System.Drawing.Size(330, 148);
+            this.pnlReaders.Size = new System.Drawing.Size(459, 145);
             this.pnlReaders.TabIndex = 5;
             // 
             // btnPayments
             // 
-            this.btnPayments.Location = new System.Drawing.Point(175, 77);
+            this.btnPayments.Location = new System.Drawing.Point(155, 77);
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Size = new System.Drawing.Size(139, 46);
             this.btnPayments.TabIndex = 7;
@@ -139,7 +143,7 @@
             // 
             // btnCategoryMovies
             // 
-            this.btnCategoryMovies.Location = new System.Drawing.Point(175, 14);
+            this.btnCategoryMovies.Location = new System.Drawing.Point(155, 14);
             this.btnCategoryMovies.Name = "btnCategoryMovies";
             this.btnCategoryMovies.Size = new System.Drawing.Size(139, 46);
             this.btnCategoryMovies.TabIndex = 6;
@@ -156,6 +160,27 @@
             this.btnCustomers.Text = "Show Customers";
             this.btnCustomers.UseVisualStyleBackColor = true;
             this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
+            // 
+            // btnActors
+            // 
+            this.btnActors.Location = new System.Drawing.Point(300, 14);
+            this.btnActors.Name = "btnActors";
+            this.btnActors.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnActors.Size = new System.Drawing.Size(139, 46);
+            this.btnActors.TabIndex = 8;
+            this.btnActors.Text = "Actors Info";
+            this.btnActors.UseVisualStyleBackColor = true;
+            this.btnActors.Click += new System.EventHandler(this.btnActors_Click);
+            // 
+            // btnSales
+            // 
+            this.btnSales.Location = new System.Drawing.Point(300, 77);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(139, 46);
+            this.btnSales.TabIndex = 9;
+            this.btnSales.Text = "Sales Info";
+            this.btnSales.UseVisualStyleBackColor = true;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // frmStart
             // 
@@ -187,6 +212,8 @@
         private System.Windows.Forms.Button btnCustomers;
         private System.Windows.Forms.Button btnCategoryMovies;
         private System.Windows.Forms.Button btnPayments;
+        private System.Windows.Forms.Button btnSales;
+        private System.Windows.Forms.Button btnActors;
     }
 }
 

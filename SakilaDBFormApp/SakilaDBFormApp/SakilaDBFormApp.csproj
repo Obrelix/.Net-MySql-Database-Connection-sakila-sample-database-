@@ -102,8 +102,17 @@
     <Compile Include="Forms\frmMoviesPay.designer.cs">
       <DependentUpon>frmMoviesPay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmActorsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmActorsInfo.Designer.cs">
+      <DependentUpon>frmActorsInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmActorsInfo.resx">
+      <DependentUpon>frmActorsInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConnection.resx">
       <DependentUpon>frmConnection.cs</DependentUpon>
     </EmbeddedResource>

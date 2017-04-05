@@ -61,3 +61,4 @@ C:\Users\user\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database
 C:\Users\user\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.pdb
 C:\Users\user\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmMoviesPay.resources
 C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmMoviesPay.resources
+C:\Users\tataki\Source\Repos\.Net-MySql-Database-Connection-sakila-sample-database-\SakilaDBFormApp\SakilaDBFormApp\obj\Debug\SakilaDBFormApp.frmActorsInfo.resources
