@@ -36,15 +36,16 @@
             this.cbxCategories = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMovies = new System.Windows.Forms.Label();
+            this.FID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.realeasedYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.length = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specialFeatures = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rentalDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.length = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.realeasedYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rentalRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.replacementCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specialFeatures = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgMovies)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,15 +69,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dvgMovies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgMovies.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FID,
             this.title,
-            this.description,
             this.Category,
-            this.realeasedYear,
-            this.length,
-            this.specialFeatures,
             this.rentalDuration,
+            this.length,
+            this.realeasedYear,
             this.rentalRate,
-            this.replacementCost});
+            this.replacementCost,
+            this.description,
+            this.specialFeatures});
             this.dvgMovies.Location = new System.Drawing.Point(12, 67);
             this.dvgMovies.MultiSelect = false;
             this.dvgMovies.Name = "dvgMovies";
@@ -84,7 +86,8 @@
             this.dvgMovies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgMovies.Size = new System.Drawing.Size(996, 351);
             this.dvgMovies.TabIndex = 17;
-            this.dvgMovies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellClick_1);
+            this.dvgMovies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgMovies_CellContentClick);
+            this.dvgMovies.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgMovies_CellDoubleClick);
             // 
             // btnGo
             // 
@@ -140,20 +143,83 @@
             this.lblMovies.TabIndex = 24;
             this.lblMovies.Text = "Movies Found:";
             // 
+            // FID
+            // 
+            this.FID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FID.DataPropertyName = "FID";
+            this.FID.HeaderText = "FID";
+            this.FID.Name = "FID";
+            this.FID.ReadOnly = true;
+            this.FID.Width = 49;
+            // 
             // title
             // 
-            this.title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.title.DataPropertyName = "title";
             this.title.FillWeight = 160F;
-            this.title.Frozen = true;
             this.title.HeaderText = "Title";
             this.title.Name = "title";
             this.title.ReadOnly = true;
             this.title.Width = 52;
             // 
+            // Category
+            // 
+            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Category.DataPropertyName = "category";
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            this.Category.Width = 74;
+            // 
+            // rentalDuration
+            // 
+            this.rentalDuration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.rentalDuration.DataPropertyName = "rental_duration";
+            this.rentalDuration.HeaderText = "Rental Duration";
+            this.rentalDuration.Name = "rentalDuration";
+            this.rentalDuration.ReadOnly = true;
+            this.rentalDuration.Width = 97;
+            // 
+            // length
+            // 
+            this.length.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.length.DataPropertyName = "length";
+            this.length.HeaderText = "Length ( min )";
+            this.length.MinimumWidth = 10;
+            this.length.Name = "length";
+            this.length.ReadOnly = true;
+            this.length.Width = 69;
+            // 
+            // realeasedYear
+            // 
+            this.realeasedYear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.realeasedYear.DataPropertyName = "rating";
+            this.realeasedYear.HeaderText = "Rating";
+            this.realeasedYear.Name = "realeasedYear";
+            this.realeasedYear.ReadOnly = true;
+            this.realeasedYear.Width = 63;
+            // 
+            // rentalRate
+            // 
+            this.rentalRate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.rentalRate.DataPropertyName = "price";
+            this.rentalRate.HeaderText = "Price ( $ )";
+            this.rentalRate.Name = "rentalRate";
+            this.rentalRate.ReadOnly = true;
+            this.rentalRate.Width = 60;
+            // 
+            // replacementCost
+            // 
+            this.replacementCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.replacementCost.DataPropertyName = "replacement_cost";
+            this.replacementCost.HeaderText = "Replacement Cost ( $ )";
+            this.replacementCost.Name = "replacementCost";
+            this.replacementCost.ReadOnly = true;
+            this.replacementCost.Width = 117;
+            // 
             // description
             // 
-            this.description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.description.DataPropertyName = "description";
             this.description.HeaderText = "Description";
             this.description.MinimumWidth = 250;
@@ -161,69 +227,14 @@
             this.description.ReadOnly = true;
             this.description.Width = 250;
             // 
-            // Category
-            // 
-            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Category.DataPropertyName = "name";
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            this.Category.Width = 74;
-            // 
-            // realeasedYear
-            // 
-            this.realeasedYear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.realeasedYear.DataPropertyName = "release_year";
-            this.realeasedYear.HeaderText = "Realease Year";
-            this.realeasedYear.Name = "realeasedYear";
-            this.realeasedYear.ReadOnly = true;
-            this.realeasedYear.Width = 102;
-            // 
-            // length
-            // 
-            this.length.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.length.DataPropertyName = "length";
-            this.length.HeaderText = "Length ( min )";
-            this.length.MinimumWidth = 10;
-            this.length.Name = "length";
-            this.length.ReadOnly = true;
-            this.length.Width = 96;
-            // 
             // specialFeatures
             // 
-            this.specialFeatures.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.specialFeatures.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.specialFeatures.DataPropertyName = "special_features";
             this.specialFeatures.HeaderText = "Special Features";
             this.specialFeatures.Name = "specialFeatures";
             this.specialFeatures.ReadOnly = true;
             this.specialFeatures.Width = 102;
-            // 
-            // rentalDuration
-            // 
-            this.rentalDuration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.rentalDuration.DataPropertyName = "rental_duration";
-            this.rentalDuration.HeaderText = "Rental Duration";
-            this.rentalDuration.Name = "rentalDuration";
-            this.rentalDuration.ReadOnly = true;
-            this.rentalDuration.Width = 97;
-            // 
-            // rentalRate
-            // 
-            this.rentalRate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.rentalRate.DataPropertyName = "rental_rate";
-            this.rentalRate.HeaderText = "Rental Rate";
-            this.rentalRate.Name = "rentalRate";
-            this.rentalRate.ReadOnly = true;
-            this.rentalRate.Width = 82;
-            // 
-            // replacementCost
-            // 
-            this.replacementCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.replacementCost.DataPropertyName = "replacement_cost";
-            this.replacementCost.HeaderText = "Replacement Cost ( $ )";
-            this.replacementCost.Name = "replacementCost";
-            this.replacementCost.ReadOnly = true;
-            this.replacementCost.Width = 117;
             // 
             // frmMovies
             // 
@@ -257,14 +268,15 @@
         private System.Windows.Forms.ComboBox cbxCategories;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMovies;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FID;
         private System.Windows.Forms.DataGridViewTextBoxColumn title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn realeasedYear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn length;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specialFeatures;
         private System.Windows.Forms.DataGridViewTextBoxColumn rentalDuration;
+        private System.Windows.Forms.DataGridViewTextBoxColumn length;
+        private System.Windows.Forms.DataGridViewTextBoxColumn realeasedYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn rentalRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn replacementCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specialFeatures;
     }
 }
