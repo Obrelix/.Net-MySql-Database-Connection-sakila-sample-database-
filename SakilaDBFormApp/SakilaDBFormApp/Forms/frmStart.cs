@@ -74,7 +74,7 @@ namespace SakilaDBFormApp
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-
+            new frmSales().Show();
         }
     }
 }
