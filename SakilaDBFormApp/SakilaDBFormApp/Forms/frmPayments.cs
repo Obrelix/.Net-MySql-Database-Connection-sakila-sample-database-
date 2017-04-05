@@ -16,8 +16,8 @@ namespace SakilaDBFormApp
         OdbcCommand cmd;
         OdbcDataReader reader;
         string SQL;
-        List<CategoryID> ListMovies = new List<CategoryID>();
-        DataTable tblMovies = new DataTable();
+        List<CategoryID> storeList = new List<CategoryID>();
+        DataTable tblPayments = new DataTable();
 
         public frmPayments()
         {
@@ -27,46 +27,89 @@ namespace SakilaDBFormApp
             cmd.Connection = DB.Cn;
         }
 
-       
-
-        
-
-        private void frmMovies_Load(object sender, EventArgs e)
-        {
-           
-            ShowPayments();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             ShowPayments();
+        }
+
+        private void loadStores()
+        {
+            CategoryID a;
+            string SQL = "SELECT store.`store_id`,address.`address`" + Environment.NewLine +
+                        "FROM store" + Environment.NewLine +
+                        "LEFT JOIN address ON store.`address_id`= address.`address_id`;";
+            try
+            {
+                cmd.CommandText = SQL;
+                reader = cmd.ExecuteReader();
+                storeList.Clear();
+                //lblEmployee.Text = "";
+                while (reader.Read())
+                {
+                    a = new CategoryID(reader[0].ToString(),
+                    //boroume omoios na grapsoume reader[1] bla bla
+                    reader["address"].ToString());
+                    storeList.Add(a);
+                }
+                cbxStore.SelectedIndexChanged -= new EventHandler(cbxStore_SelectedIndexChanged);
+                bind(cbxStore);
+                cbxStore.SelectedIndex = -1;
+                cbxStore.Text = "Select Store ... ";
+                // lblEmployee.Text = "";
+                cbxStore.SelectedIndexChanged += new EventHandler(cbxStore_SelectedIndexChanged);
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally
+            {
+                //reader?.Close(); //if (reader != null) reader.Close();
+            }
+        }
+
+        private void bind(ComboBox cb)
+        {
+            cb.BeginUpdate();
+            cb.DataSource = null;
+            cb.DataSource = storeList;
+            cb.ValueMember = "id";
+            cb.DisplayMember = "name";
+            cb.EndUpdate();
         }
 
         private void ShowPayments()
         {
             string from, to;
             string sWHERE = string.Empty;
+            int storeID;
             try
             {
                 from = dtpFrom.Value.ToString("yyyy-MM-dd");
                 to = dtpTo.Value.ToString("yyyy-MM-dd");
-                sWHERE = "Where payment_date BETWEEN'" + from + "'AND'" + to + "'"; 
+                sWHERE = "WHERE payment.`payment_date` BETWEEN '" + from + "' AND '" + to + "'";
 
-                SQL = "SELECT payment.`payment_id`,payment.`amount`,payment.`payment_date`,film.`title`,customer.`last_name`,customer.`first_name`" + Environment.NewLine +
+                SQL = "SELECT payment.`payment_id`,CONCAT(customer.`first_name`,' ', customer.`last_name`) AS Customer,customer.`email`,payment.`amount`,payment.`payment_date`, address.`address` AS StoreAddress" + Environment.NewLine +
                     "FROM payment" + Environment.NewLine +
-                    "LEFT JOIN customer ON payment.`customer_id` = customer.`customer_id`" + Environment.NewLine +
-                    "LEFT JOIN rental ON customer.`customer_id` = rental.`customer_id`" + Environment.NewLine +
-                    "LEFT JOIN inventory ON inventory.`inventory_id` = rental.`rental_id`" + Environment.NewLine +
-                    "LEFT JOIN film ON film.`film_id` = inventory.`film_id`";
-
+                    "LEFT JOIN customer ON payment.`customer_id`=customer.`customer_id`" + Environment.NewLine +
+                    "LEFT JOIN store ON customer.`store_id`=store.`store_id`" + Environment.NewLine +
+                    "LEFT JOIN address ON store.`address_id`=address.`address_id`" + Environment.NewLine;
+                sWHERE += " AND customer.`last_name` LIKE '%" + txtCustomerLName.Text + "%'";
+                if (cbxStore.SelectedIndex != -1)
+                {
+                    CategoryID a = (CategoryID)cbxStore.SelectedItem;
+                    storeID = Convert.ToInt32(a.id);
+                    sWHERE += "  AND store.`store_id`=" + storeID;
+                }
                 SQL += sWHERE;
                 cmd.CommandText = SQL;
                 reader = cmd.ExecuteReader();
 
-                tblMovies.Rows.Clear();
-                tblMovies.Load(reader);
-                dvgMovies.DataSource = tblMovies;
-                lblMovies.Text ="Movies Found: " + tblMovies.Rows.Count.ToString();
+                tblPayments.Rows.Clear();
+                tblPayments.Load(reader);
+                dvgPayments.DataSource = tblPayments;
+                lblPayments.Text ="Payments Found: " + tblPayments.Rows.Count.ToString();
                 if (reader != null)
                 {
                     reader.Close();
@@ -79,20 +122,10 @@ namespace SakilaDBFormApp
                 //reader?.Close();
             }
         }
-
-        private void cbEmp_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-            ShowPayments();
-        }
+        
         
 
-        private void dgvOrders_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex != 1) return;
-        }
-
-        private void cbxCategories_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbxStore_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowPayments();
         }
@@ -102,18 +135,30 @@ namespace SakilaDBFormApp
         {
             ShowPayments();
         }
+        
 
-        private void dgvOrders_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void txtCustomerLName_TextChanged(object sender, EventArgs e)
         {
-            if(e.RowIndex != -1)
-            {
-                string title = dvgMovies.Rows[e.RowIndex].Cells[0].Value.ToString();
-                frmActors form = new frmActors(title);
-                form.Show();
-            }
-            //form.GetDada();
+            cbxStore.SelectedIndex = -1;
+            cbxStore.Text = "Select Store ... ";
         }
 
-        
+        private void frmPayments_Load(object sender, EventArgs e)
+        {
+            ShowPayments();
+            loadStores();
+        }
+
+       
+
+        private void dvgPayments_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                string payment_id = dvgPayments.Rows[e.RowIndex].Cells[0].Value.ToString();
+                frmMoviesPay form = new frmMoviesPay(payment_id);
+                form.Show();
+            }
+        }
     }
 }
