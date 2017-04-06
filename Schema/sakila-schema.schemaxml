@@ -20,8 +20,8 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=201 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="address" view="colnames">
-<left>146</left>
-<top>441</top>
+<left>145</left>
+<top>440</top>
 <width>114</width>
 <height>194</height>
 <sql_create_table>CREATE TABLE `address` (
@@ -66,8 +66,8 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=601 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="country" view="colnames">
-<left>21</left>
-<top>591</top>
+<left>14</left>
+<top>593</top>
 <width>119</width>
 <height>112</height>
 <sql_create_table>CREATE TABLE `country` (
@@ -78,10 +78,10 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="customer" view="colnames">
-<left>465</left>
-<top>357</top>
+<left>282</left>
+<top>5</top>
 <width>116</width>
-<height>226</height>
+<height>208</height>
 <sql_create_table>CREATE TABLE `customer` (
   `customer_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `store_id` tinyint(3) unsigned NOT NULL,
@@ -187,30 +187,30 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="payment" view="colnames">
-<left>275</left>
-<top>58</top>
+<left>11</left>
+<top>74</top>
 <width>151</width>
 <height>177</height>
 <sql_create_table>CREATE TABLE `payment` (
   `payment_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `customer_id` smallint(5) unsigned NOT NULL,
-  `staff_id` tinyint(3) unsigned NOT NULL,
+  `store_id` tinyint(3) unsigned NOT NULL,
   `rental_id` int(11) DEFAULT NULL,
   `amount` decimal(5,2) NOT NULL,
   `payment_date` datetime NOT NULL,
   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`payment_id`),
-  KEY `idx_fk_staff_id` (`staff_id`),
+  KEY `idx_fk_staff_id` (`store_id`),
   KEY `idx_fk_customer_id` (`customer_id`),
   KEY `fk_payment_rental` (`rental_id`),
   CONSTRAINT `fk_payment_customer` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON UPDATE CASCADE,
   CONSTRAINT `fk_payment_rental` FOREIGN KEY (`rental_id`) REFERENCES `rental` (`rental_id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  CONSTRAINT `fk_payment_staff` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`) ON UPDATE CASCADE
+  CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`store_id`) REFERENCES `store` (`store_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16050 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="rental" view="colnames">
-<left>470</left>
-<top>111</top>
+<left>465</left>
+<top>223</top>
 <width>116</width>
 <height>180</height>
 <sql_create_table>CREATE TABLE `rental` (
@@ -233,7 +233,7 @@
 </table>
 <table name="staff" view="colnames">
 <left>10</left>
-<top>192</top>
+<top>262</top>
 <width>112</width>
 <height>244</height>
 <sql_create_table>CREATE TABLE `staff` (
@@ -256,10 +256,10 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="store" view="colnames">
-<left>284</left>
-<top>293</top>
+<left>452</left>
+<top>411</top>
 <width>146</width>
-<height>141</height>
+<height>127</height>
 <sql_create_table>CREATE TABLE `store` (
   `store_id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `manager_staff_id` tinyint(3) unsigned NOT NULL,

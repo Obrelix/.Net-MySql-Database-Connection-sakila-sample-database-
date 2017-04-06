@@ -157,4 +157,11 @@ FROM (((`staff` `s`
       ON ((`a`.`city_id` = `city`.`city_id`)))
    JOIN `country`
      ON ((`city`.`country_id` = `country`.`country_id`)));
+     
+     SELECT rental.`rental_id` FROM rental 
+     LEFT JOIN payment ON rental.`rental_id`=payment.`rental_id`
+     WHERE payment.`rental_id` IS NULL;
+     
+     SELECT * FROM rental WHERE rental.`return_date` IS NULL;
+     
  
